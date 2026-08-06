@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valley Screen Report — Phoenix ticket drops, free passes & one-off screenings</title>
+<meta name="description" content="What's on sale, what's about to drop, and what's playing once only. Phoenix and the East Valley. Updated August 5, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0B1F24;
+  --night-2:#102A31;
+  --stock:#F2EFE6;
+  --bulb:#F0A830;
+  --print:#C8452F;
+  --mint:#7FB09B;
+  --dim:#8FA6A9;
+  --rule:rgba(242,239,230,.16);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--night);
+  color:var(--stock);
+  font-family:"Newsreader",Georgia,serif;
+  font-size:17px;
+  line-height:1.55;
+  font-optical-sizing:auto;
+}
+h1,h2,h3,.sign{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:.95;margin:0}
+.mono{font-family:"DM Mono",ui-monospace,monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+a{color:var(--bulb)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--bulb);outline-offset:3px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+
+/* ---------- marquee ---------- */
+.marquee{
+  border-bottom:1px solid var(--rule);
+  background:
+    radial-gradient(120% 90% at 50% -20%, rgba(240,168,48,.16), transparent 60%),
+    var(--night-2);
+  padding:0 0 34px;
+}
+.bulbs{display:flex;gap:10px;justify-content:center;padding:16px 12px 6px;flex-wrap:wrap}
+.bulb{width:7px;height:7px;border-radius:50%;background:var(--bulb);opacity:.35;animation:glow 3.2s infinite}
+.bulb:nth-child(3n){animation-delay:.5s}
+.bulb:nth-child(3n+1){animation-delay:1.1s}
+@keyframes glow{0%,100%{opacity:.28}50%{opacity:.95;box-shadow:0 0 9px var(--bulb)}}
+@media (prefers-reduced-motion:reduce){.bulb{animation:none;opacity:.6}}
+.marquee h1{
+  font-size:clamp(2.9rem,11vw,6.4rem);
+  font-weight:800;
+  text-align:center;
+  margin:8px 0 0;
+}
+.marquee h1 em{font-style:normal;color:var(--bulb)}
+.tagline{
+  text-align:center;
+  font-family:"Newsreader",serif;
+  font-size:1.02rem;
+  color:var(--dim);
+  max-width:34ch;
+  margin:14px auto 0;
+  line-height:1.4;
+}
+.stamp{text-align:center;color:var(--mint);margin-top:18px}
+
+/* ---------- headline item ---------- */
+.headline{
+  margin:34px 0 0;
+  border:1px solid var(--rule);
+  border-left:4px solid var(--print);
+  padding:22px 22px 20px;
+  background:rgba(200,69,47,.07);
+}
+.headline .kicker{color:var(--print);margin-bottom:8px;display:block}
+.headline h2{font-size:clamp(1.7rem,5.5vw,2.5rem);font-weight:800}
+.headline p{margin:10px 0 0;color:#D8D3C6}
+
+/* ---------- sections ---------- */
+section{padding:52px 0 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:9px;margin-bottom:4px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(1.6rem,4.6vw,2.2rem);font-weight:600}
+.sec-head .note{color:var(--dim);font-family:"DM Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- ticket rows ---------- */
+.stub{
+  display:grid;
+  grid-template-columns:104px 1fr;
+  gap:0 20px;
+  padding:20px 0;
+  border-bottom:1px dashed var(--rule);
+  align-items:start;
+}
+.stub:last-child{border-bottom:0}
+.when{
+  font-family:"Big Shoulders Display",sans-serif;
+  text-transform:uppercase;
+  line-height:.9;
+  padding-top:3px;
+}
+.when .d{display:block;font-size:2.35rem;font-weight:800}
+.when .m{display:block;font-size:.92rem;color:var(--dim);letter-spacing:.1em}
+.stub h3{font-size:1.5rem;font-weight:600}
+.stub h3 span{font-family:"Newsreader",serif;text-transform:none;letter-spacing:0;font-size:.92rem;color:var(--dim);font-weight:400}
+.where{color:var(--dim);font-size:.94rem;margin:4px 0 0}
+.stub p.body{margin:9px 0 0;font-size:.97rem;color:#D8D3C6}
+
+/* ---------- status chips ---------- */
+.chip{
+  display:inline-block;
+  font-family:"DM Mono",monospace;
+  font-size:.66rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border:1px solid currentColor;
+  margin:0 0 7px;
+}
+.c-live{color:var(--mint)}
+.c-wait{color:var(--bulb)}
+.c-gone{color:var(--print)}
+.c-enter{color:#9FB8D6}
+
+/* ---------- watchlist ---------- */
+.watch{border-top:1px solid var(--rule);padding:22px 0}
+.watch:first-of-type{border-top:0}
+.watch .top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap}
+.watch h3{font-size:1.7rem;font-weight:800}
+.watch .rel{color:var(--dim);font-family:"DM Mono",monospace;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+.watch p{margin:9px 0 0;font-size:.99rem;color:#D8D3C6}
+.watch .tell{
+  margin-top:11px;padding:10px 14px;
+  border-left:2px solid var(--bulb);
+  background:rgba(240,168,48,.06);
+  font-size:.93rem;
+}
+.watch .tell b{font-family:"DM Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bulb);display:block;margin-bottom:3px}
+
+/* ---------- changelog ---------- */
+.log{list-style:none;padding:0;margin:14px 0 0}
+.log li{display:grid;grid-template-columns:78px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:.97rem;color:#D8D3C6}
+.log li:last-child{border-bottom:0}
+.log .dt{font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.07em;color:var(--mint);padding-top:4px}
+
+/* ---------- sources ---------- */
+.src{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:18px}
+.src div{background:var(--night);padding:15px 16px}
+.src h4{font-family:"Big Shoulders Display",sans-serif;text-transform:uppercase;font-size:1.1rem;margin:0 0 3px;font-weight:600}
+.src p{margin:0;font-size:.88rem;color:var(--dim);line-height:1.4}
+
+footer{margin-top:60px;border-top:1px solid var(--rule);padding:26px 0 50px;color:var(--dim);font-size:.87rem}
+footer p{margin:0 0 8px}
+
+@media(max-width:560px){
+  body{font-size:16px}
+  .stub{grid-template-columns:64px 1fr;gap:0 14px}
+  .when .d{font-size:1.7rem}
+  .when .m{font-size:.75rem}
+  .log li{grid-template-columns:64px 1fr;gap:11px}
+}
+</style>
+</head>
+<body>
+
+<header class="marquee">
+  <div class="bulbs" aria-hidden="true">
+    <i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i><i class="bulb"></i>
+  </div>
+  <div class="wrap">
+    <h1>Valley<br><em>Screen</em> Report</h1>
+    <p class="tagline">Ticket drops, free passes, and films playing once only. Phoenix and the East Valley.</p>
+    <p class="stamp mono">Checked Wed Aug 5, 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="headline">
+    <span class="kicker mono">The one that got away</span>
+    <h2>Dune: Part Three is sold out at Arizona Mills</h2>
+    <p>All eight IMAX 70mm showings on opening weekend — two a day, Dec 17–20 — are gone. Arizona Mills is the only 1.43:1 IMAX screen in Arizona, and it was one of just 19 theaters worldwide in the April on-sale. General tickets have not been released yet. That is the next drop, and it will be announced on Harkins' own channels before anywhere else.</p>
+  </div>
+
+  <section id="act">
+    <div class="sec-head">
+      <h2>Act on these</h2>
+      <span class="note">Deadlines inside two weeks</span>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">10</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-enter">Free — enter to win</span>
+        <h3>The End of Oak Street <span>— advance screening</span></h3>
+        <p class="where">Harkins Tempe Marketplace · 7:00 PM</p>
+        <p class="body">Anne Hathaway and Ewan McGregor, from the director of <em>It Follows</em>. Opens Aug 14, so this is four days early. Four separate sweepstakes are running for the same screening — enter all of them, they draw independently. Two confirmed links: <strong>wbtickets.com/RCCTEOOSPHX</strong> (Red Carpet Crash) and <strong>wbtickets.com/MOMTEOOSPHX</strong> (Mind on Movies). Note that Phoenix is a sweepstakes, not a first-come claim like most cities.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">13</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>Back to the Future <span>— 35mm print</span></h3>
+        <p class="where">Majestic Tempe 7</p>
+        <p class="body">An actual film print, not a DCP. Majestic runs these irregularly and they are the closest thing the Valley has to a repertory house.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">15</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>Kubrick Spotlight <span>— six films, Aug 15 – Sep 2</span></h3>
+        <p class="where">Harkins, multiple locations</p>
+        <p class="body">2001, Dr. Strangelove, A Clockwork Orange, The Shining, Barry Lyndon, Full Metal Jacket. 2001 plays Aug 15, 16 and 19. If you see one thing this month, this is it.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">18</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>La La Land <span>— 10th anniversary, Dolby Cinema</span></h3>
+        <p class="where">AMC Mesa Grand 14 · also Aug 19 at Deer Valley, Desert Ridge, Westgate</p>
+        <p class="body">Dolby Vision and Atmos, exclusive to Dolby Cinema at AMC, Aug 16–19 only. First time the film has been presented in the format.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">18</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-enter">Free — enter to win</span>
+        <h3>Mutiny <span>— advance screening</span></h3>
+        <p class="where">Harkins Camelview at Fashion Square · 7:00 PM</p>
+        <p class="body">Posted this morning, ahead of the aggregators. Link: <strong>lionsgatescreenings.com/MUTRCCPHX</strong>. Collides with La La Land at Mesa Grand — pick one.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">21</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>Labyrinth <span>— 35mm print, Aug 21–27</span></h3>
+        <p class="where">Harkins Tempe Marketplace 16</p>
+        <p class="body">Part of Harkins' Movies In 35MM series. Ticket includes a free commemorative stub — the physical kind worth keeping.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="watchlist">
+    <div class="sec-head">
+      <h2>The watchlist</h2>
+      <span class="note">Not on sale yet — where the drop will surface</span>
+    </div>
+
+    <div class="watch">
+      <div class="top">
+        <h3>Akira <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
+        <span class="rel">Fri Sep 4, 2026</span>
+      </div>
+      <p>The 4K restoration in IMAX, from Crunchyroll and Sony, in both subtitled and dubbed versions. Announced July 2. No theater list, no on-sale date, and nothing on Harkins' site yet. Mid-August is the realistic window.</p>
+      <div class="tell">
+        <b>Where it shows up first</b>
+        Harkins files anime under a dedicated series page rather than a standalone listing, so <strong>harkins.com/events-and-series/anime-at-harkins</strong> will likely show it before any press release. Watch Crunchyroll's news page and @Crunchyroll too. Ignore the Akira IMAX pages already live on AMC and Fandango — those are leftovers from the 2020 run.
+      </div>
+    </div>
+
+    <div class="watch">
+      <div class="top">
+        <h3>Dune: Part Three <span class="chip c-gone" style="vertical-align:middle;margin-left:8px">Sold out</span></h3>
+        <span class="rel">Dec 17–20 · wide Dec 18</span>
+      </div>
+      <p>Opening-weekend IMAX 70mm at Arizona Mills is fully sold. Wave one went on sale April 6 with about half an hour's public notice, crashed the AMC app, and resold for around $1,000. Harkins added a second daily showtime days later; that went too.</p>
+      <div class="tell">
+        <b>What's still coming</b>
+        General on-sale has not happened. The film has a three-week global IMAX exclusivity window, so a run past Dec 20 is close to certain, and venues have said more opening-weekend showtimes will be added. Both Dune drops were announced on Harkins' Facebook and email list first — get on the list, that is the whole strategy.
+      </div>
+    </div>
+
+    <div class="watch">
+      <div class="top">
+        <h3>LOTR Extended Editions <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
+        <span class="rel">Sep 4, 5, 6</span>
+      </div>
+      <p>All three extended cuts across three nights at Harkins. Roughly 3h48, 3h55 and 4h23 — about eleven and a half hours total. This is <em>not</em> the national Fathom event; that ran in January. It's a Harkins in-house booking, so there will be no national coverage announcing it.</p>
+      <div class="tell">
+        <b>What to expect</b>
+        When Harkins ran this before, it played in CINÉ XL — their large format with Dolby Atmos and 4K laser — at Arizona Mills, Tempe Marketplace, Chandler Fashion, SanTan Village, Scottsdale 101 and Estrella Falls, at $8 a film or $30 for a series pass including popcorn each night. If the series pass returns, it may sell before individual tickets.
+      </div>
+    </div>
+
+    <div class="watch">
+      <div class="top">
+        <h3>Star Wars <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
+        <span class="rel">Fri Feb 19, 2027</span>
+      </div>
+      <p>The 1977 original, presented as audiences first saw it, for the 50th anniversary. IMAX confirmed the slot in its July investor presentation, but Lucasfilm hasn't announced ticket timing, theaters, run length, or whether any screenings use IMAX film projection. If you see April 30 listed anywhere, that's the old date.</p>
+    </div>
+
+    <div class="watch">
+      <div class="top">
+        <h3>The Prestige <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Format unconfirmed</span></h3>
+        <span class="rel">Thu Jan 21, 2027</span>
+      </div>
+      <p>Nolan confirmed a 70mm upgrade for the 20th anniversary, describing 70mm blow-ups from the original 35mm anamorphic photography. Coverage has split on whether it's IMAX 70mm — Nolan himself didn't say IMAX. That distinction decides whether Arizona Mills can even play it, so treat it as standard 70mm until Warner says otherwise.</p>
+    </div>
+  </section>
+
+  <section id="repertory">
+    <div class="sec-head">
+      <h2>Playing once only</h2>
+      <span class="note">Rest of August into September</span>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">19</span><span class="m">Aug</span></div>
+      <div>
+        <h3>The Running Man <span>— 1987</span></h3>
+        <p class="where">Majestic Tempe · History of the Future series</p>
+        <p class="body">Presented with ASU's Center for Science and the Imagination.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">22</span><span class="m">Aug</span></div>
+      <div>
+        <h3>The Two Towers</h3>
+        <p class="where">Majestic Tempe · presented by Trees Matter</p>
+        <p class="body">A one-off benefit screening, unrelated to the Harkins extended-edition nights in September.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">27</span><span class="m">Aug</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>Harry Potter 25th <span>— all eight films, Aug 27 – Sep 3</span></h3>
+        <p class="where">AMC, Harkins, Cinemark, Regal, Majestic</p>
+        <p class="body">Sorcerer's Stone also plays in 3D. Every chain has its own collectible cups and buckets; Cinemark's are already selling online.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">31</span><span class="m">Aug</span></div>
+      <div>
+        <h3>The Lost Boys <span>— 35mm print</span></h3>
+        <p class="where">Majestic Tempe 7</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">04</span><span class="m">Sep</span></div>
+      <div>
+        <span class="chip c-wait">Not on sale</span>
+        <h3>Star Trek 60th <span>— four films, Sep 4–7</span></h3>
+        <p class="where">Paramount, chains TBA</p>
+        <p class="body">The first four features, each paired with one original-series episode: The Motion Picture with <em>The Changeling</em>, Wrath of Khan with <em>Space Seed</em>, Search for Spock with <em>Amok Time</em>, and The Voyage Home with <em>The City on the Edge of Forever</em>.</p>
+      </div>
+    </div>
+
+    <div class="stub">
+      <div class="when"><span class="d">06</span><span class="m">Sep</span></div>
+      <div>
+        <span class="chip c-live">On sale</span>
+        <h3>Faust <span>— 1926, live score</span></h3>
+        <p class="where">Orpheum Theatre, downtown Phoenix</p>
+        <p class="body">Murnau's silent, with the score performed live by the Mysterium Quartet. A hundred-year-old film in a 1929 movie palace.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="changed">
+    <div class="sec-head">
+      <h2>What changed</h2>
+      <span class="note">Newest first</span>
+    </div>
+    <ul class="log">
+      <li><span class="dt">Aug 5</span><span>Mutiny passes posted at Harkins Camelview for Aug 18, a day before the aggregators picked it up.</span></li>
+      <li><span class="dt">Aug 5</span><span>Confirmed the September LOTR nights are a Harkins booking, not the Fathom national release — which already ran in January. No national announcement is coming.</span></li>
+      <li><span class="dt">Aug 4</span><span>Arizona Mills verified sold out: two Dune showtimes a day across all four opening-weekend dates.</span></li>
+      <li><span class="dt">Aug 4</span><span>Correction — a Harkins post reading "new showtimes added" for Dune turned out to date from April, not this week.</span></li>
+      <li><span class="dt">Aug 4</span><span>The Prestige leaning standard 70mm rather than IMAX. Nolan described 35mm blow-ups and never said IMAX.</span></li>
+      <li><span class="dt">Aug 3</span><span>Three more Oak Street sweepstakes opened within thirteen hours of each other.</span></li>
+      <li><span class="dt">Jul 23</span><span>IMAX added the Star Wars 50th anniversary release to its slate in an investor presentation.</span></li>
+      <li><span class="dt">Jul 2</span><span>Akira 4K/IMAX announced for Sep 4 by Crunchyroll and Sony.</span></li>
+    </ul>
+  </section>
+
+  <section id="sources">
+    <div class="sec-head">
+      <h2>Where this comes from</h2>
+      <span class="note">Check these yourself</span>
+    </div>
+    <div class="src">
+      <div>
+        <h4>cmiphx.com</h4>
+        <p>Classic Movies In Phoenix. A hand-kept daily calendar of every repertory and anniversary screening in the metro, with ticket links per chain and honest "not on sale yet" flags. Better than anything the chains publish.</p>
+      </div>
+      <div>
+        <h4>advancescreenings.com</h4>
+        <p>Aggregates Gofobo plus the local outlets that actually get Phoenix allocations. Check the Tempe page too — most screenings land there, not in Phoenix proper.</p>
+      </div>
+      <div>
+        <h4>redcarpetcrash.com</h4>
+        <p>Their Phoenix category posts passes roughly a day before the aggregators. Worth checking direct.</p>
+      </div>
+      <div>
+        <h4>Harkins email &amp; Facebook</h4>
+        <p>Where both Dune drops were announced first, with no press release and about thirty minutes' notice. The single highest-value thing on this list to subscribe to.</p>
+      </div>
+      <div>
+        <h4>harkins.com/events-and-series</h4>
+        <p>Anime at Harkins, Studio Ghibli, Tuesday Night Classics, Movies In 35MM, Kubrick Spotlight. New bookings appear under a series before they appear anywhere else.</p>
+      </div>
+      <div>
+        <h4>Pollack Tempe Cinemas</h4>
+        <p>Currently polling on Facebook for future classic series. LOTR, the Mummy trilogy, Twilight and Stephen King are on the ballot. A vote is free.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>Six IMAX screens exist in the metro: Harkins Arizona Mills (the only one in Arizona with 70mm film capability), AMC Mesa Grand, Desert Ridge, Deer Valley, Westgate, and Superstition East.</p>
+  <p>Everything above was verified on the date shown. Sold-out status, showtimes and pass availability change fast — confirm before you drive.</p>
+  <p class="mono" style="color:var(--mint);margin-top:16px">Valley Screen Report · Tempe, AZ</p>
+</footer>
+
+</body>
+</html>
