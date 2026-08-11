@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Valley Screen Report — Phoenix &amp; Tucson ticket drops, free passes &amp; one-off screenings</title>
-<meta name="description" content="What's on sale, what's about to drop, and what's playing once only. Phoenix, the East Valley, and Tucson. Updated August 10, 2026.">
+<meta name="description" content="What's on sale, what's about to drop, and what's playing once only. Phoenix, the East Valley, and Tucson. Updated August 11, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -68,35 +68,25 @@ line-height:1.4;
 }
 .stamp{text-align:center;color:var(--mint);margin-top:18px}
 
-/* ---------- city tabs ---------- */
-.tabs{
-display:flex;
-justify-content:center;
-gap:0;
-margin:22px auto 0;
-border:1px solid var(--rule);
-width:fit-content;
-}
+/* ---------- tabs ---------- */
+.tabs{display:flex;gap:0;justify-content:center;margin-top:22px;border-bottom:1px solid var(--rule)}
 .tabs button{
 appearance:none;
 background:transparent;
 border:0;
-border-right:1px solid var(--rule);
+border-bottom:3px solid transparent;
 color:var(--dim);
-font-family:"DM Mono",ui-monospace,monospace;
-font-size:.74rem;
-letter-spacing:.12em;
+font-family:"Big Shoulders Display",Impact,sans-serif;
 text-transform:uppercase;
-padding:11px 26px;
+letter-spacing:.06em;
+font-size:1.35rem;
+font-weight:600;
+padding:9px 22px 8px;
 cursor:pointer;
-transition:color .15s,background .15s;
+line-height:1;
 }
-.tabs button:last-child{border-right:0}
+.tabs button[aria-selected="true"]{color:var(--stock);border-bottom-color:var(--bulb)}
 .tabs button:hover{color:var(--stock)}
-.tabs button[aria-selected="true"]{
-background:rgba(240,168,48,.12);
-color:var(--bulb);
-}
 .pane[hidden]{display:none}
 
 /* ---------- headline item ---------- */
@@ -192,7 +182,7 @@ body{font-size:16px}
 .when .d{font-size:1.7rem}
 .when .m{font-size:.75rem}
 .log li{grid-template-columns:64px 1fr;gap:11px}
-.tabs button{padding:11px 18px;font-size:.68rem}
+.tabs button{font-size:1.1rem;padding:8px 14px 7px}
 }
 </style>
 </head>
@@ -205,10 +195,10 @@ body{font-size:16px}
 <div class="wrap">
 <h1>Valley<br><em>Screen</em> Report</h1>
 <p class="tagline">Ticket drops, free passes, and films playing once only. Phoenix, the East Valley, and Tucson.</p>
-<p class="stamp mono">Checked Mon Aug 10, 2026</p>
-<div class="tabs" role="tablist" aria-label="City">
-<button role="tab" id="tab-valley" aria-controls="pane-valley" aria-selected="true">Valley</button>
-<button role="tab" id="tab-tucson" aria-controls="pane-tucson" aria-selected="false">Tucson</button>
+<p class="stamp mono">Checked Tue Aug 11, 2026</p>
+<div class="tabs" role="tablist">
+<button id="tab-valley" role="tab" aria-selected="true" aria-controls="pane-valley">Phoenix &amp; East Valley</button>
+<button id="tab-tucson" role="tab" aria-selected="false" aria-controls="pane-tucson">Tucson</button>
 </div>
 </div>
 </header>
@@ -219,9 +209,9 @@ body{font-size:16px}
 <div class="pane" id="pane-valley" role="tabpanel" aria-labelledby="tab-valley">
 
 <div class="headline">
-<span class="kicker mono">The next drop</span>
-<h2>Dune: Part Three general tickets have not been released yet</h2>
-<p>Only the April presale has happened — eight IMAX 70mm showings at Arizona Mills, two a day across Dec 17–20, and those are gone. That was one wave at one theater, not the on-sale. Arizona Mills is the only 1.43:1 IMAX screen in Arizona, venues have said more opening-weekend showtimes are coming, and the three-week global IMAX exclusivity window means a run past Dec 20 is close to certain. The general drop is still ahead, and it will be announced on Harkins' email list and Facebook before anywhere else — with roughly thirty minutes' notice, as it was last time.</p>
+<span class="kicker mono">On screen now</span>
+<h2>The Odyssey is playing on two 70mm screens in Tempe, and one of them stops Thursday</h2>
+<p>Harkins Arizona Mills is running Nolan's film in true IMAX 70mm — the only 1.43:1 IMAX 70mm screen in Arizona and one of 41 in the world — with showtimes today at 10:30 AM, 2:15, 6:00, 9:45 PM and a 1:30 AM late show, and the booking continues at least through Aug 20. Separately, <strong>Harkins Tempe Marketplace</strong> has been running it as a 70mm non-IMAX film print, and that run disappears from Harkins' schedule after <strong>Thursday Aug 13</strong> — 10:35 AM, 2:35, 6:25 and 10:20 PM are the last four showings listed. Harkins is handing out collectible 35mm and 70mm film strips to 35mm and 70mm ticketholders while supplies last. Tucson has a 70mm run of the same film at The Loft, but there is no reason to drive for it — see the Tucson tab.</p>
 </div>
 
 <section id="act">
@@ -231,22 +221,12 @@ body{font-size:16px}
 </div>
 
 <div class="stub">
-<div class="when"><span class="d">10</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-enter">Free — enter to win</span>
-<h3>The End of Oak Street <span>— advance screening</span></h3>
-<p class="where">Harkins Tempe Marketplace · 7:00 PM</p>
-<p class="body">Tonight, and the draws have almost certainly already been made — if a code was coming, it has arrived by now. Anne Hathaway and Ewan McGregor, from the director of <em>It Follows</em>. Opens Aug 14, so this is four days early. Six separate sweepstakes are running for the same screening and they draw independently, so enter all of them — Red Carpet Crash, Mind on Movies, txtMovieClub, Pop Culture Pros, Zia Records and a Facebook entry. Two confirmed links: <strong>wbtickets.com/RCCTEOOSPHX</strong> (Red Carpet Crash) and <strong>wbtickets.com/MOMTEOOSPHX</strong> (Mind on Movies). Note that Phoenix is a sweepstakes, not a first-come claim like most cities.</p>
-</div>
-</div>
-
-<div class="stub">
 <div class="when"><span class="d">11</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-enter">Free — enter to win</span>
 <h3>Daniel and The Fiery Furnace <span>— advance screening</span></h3>
 <p class="where">AMC Desert Ridge 18 · 7:00 PM</p>
-<p class="body">A faith-based biblical drama with Mena Massoud, five weeks ahead of its Sep 18 release. An RSVP form rather than a code drop, run by eKKL Entertainment through <strong>advancescreenings.com/go/fkrKtzmK</strong>. Only one outlet is carrying it, so there is no second entry to hedge with.</p>
+<p class="body">Tonight. A faith-based biblical drama with Mena Massoud, five weeks ahead of its Sep 18 release. An RSVP form rather than a code drop, run by eKKL Entertainment through <strong>advancescreenings.com/go/fkrKtzmK</strong>. Still the only outlet carrying it after fourteen days, so there is no second entry to hedge with.</p>
 </div>
 </div>
 
@@ -256,7 +236,27 @@ body{font-size:16px}
 <span class="chip c-live">On sale</span>
 <h3>The Warriors <span>— 1979, theatrical cut</span></h3>
 <p class="where">Harkins, locations vary · Tuesday Night Classics</p>
-<p class="body">The original theatrical version, not the 2005 director's cut with the comic-panel wipes — worth knowing before you buy. Harkins has the ticket page up. Same night, <strong>Practical Magic</strong> returns for one showing only at AMC, Harkins and Regal, so Tuesday is a two-way choice.</p>
+<p class="body">The original theatrical version, not the 2005 director's cut with the comic-panel wipes — worth knowing before you buy. Same night, <strong>Practical Magic</strong> returns for one showing only at AMC, Harkins and Regal, so tonight is a two-way choice.</p>
+</div>
+</div>
+
+<div class="stub">
+<div class="when"><span class="d">12</span><span class="m">Aug</span></div>
+<div>
+<span class="chip c-live">On sale</span>
+<h3>Do the Right Thing <span>— 1989</span></h3>
+<p class="where">Phoenix Art Museum</p>
+<p class="body">One night, sold through the museum rather than a chain, which is why it does not show up on any ticketing app. Added to cmiphx.com's calendar since the last check here.</p>
+</div>
+</div>
+
+<div class="stub">
+<div class="when"><span class="d">13</span><span class="m">Aug</span></div>
+<div>
+<span class="chip c-live">On sale</span>
+<h3>The Odyssey in 70mm <span>— last day of the Tempe Marketplace run</span></h3>
+<p class="where">Harkins Tempe Marketplace 16 · 10:35 AM, 2:35, 6:25, 10:20 PM</p>
+<p class="body">A 70mm film print, non-IMAX. Harkins' schedule data lists these four showings on Aug 13 and then nothing at Tempe Marketplace from Aug 14 onward, so Thursday reads as the last day. The IMAX 70mm run at Arizona Mills is unaffected and continues past Aug 20. Ticketholders in 35mm or 70mm get a collectible film strip while supplies last. If you want the film on actual film without driving to Arizona Mills, this is the last chance.</p>
 </div>
 </div>
 
@@ -266,7 +266,7 @@ body{font-size:16px}
 <span class="chip c-live">On sale</span>
 <h3>Your Name. <span>— 10th anniversary, 4K, Thursday previews</span></h3>
 <p class="where">Arizona Mills, Tempe Marketplace, Chandler Fashion, Arrowhead Fountains</p>
-<p class="body">On sale, and playing earlier than the listed release date. Makoto Shinkai's 2016 film returns in a GKIDS 4K restoration officially opening Aug 14, but Harkins is running Thursday previews on <strong>Aug 13</strong> and those showtimes are live and purchasable: Arizona Mills 5:00 and 10:25 PM, Tempe Marketplace 5:15 PM, Chandler Fashion 5:00 and 10:00 PM, Arrowhead Fountains 5:00 and 10:20 PM. All of these are Digital — the Arizona Mills showings are in a standard house, <em>not</em> on its IMAX screen. Japanese-subtitled and English-dubbed versions are both listed; the times above are from the subtitled page. A third title, <strong>Your Letter</strong> (Korean, subtitled), follows Aug 17. Regal and AMC are carrying the film too.</p>
+<p class="body">Playing a day earlier than the listed release date. Makoto Shinkai's 2016 film in a GKIDS 4K restoration officially opens Aug 14, but Harkins' Thursday previews on <strong>Aug 13</strong> are live and purchasable: Arizona Mills 5:00 and 10:25 PM, Tempe Marketplace 5:15 PM, Chandler Fashion 5:00 and 10:00 PM, Arrowhead Fountains 5:00 and 10:20 PM. All Digital — the Arizona Mills showings are in a standard house, <em>not</em> on its IMAX screen. Japanese-subtitled and English-dubbed versions are both listed; the times above are from the subtitled page. <strong>Your Letter</strong> (Korean, subtitled) follows Aug 17. Regal and AMC are carrying the film too.</p>
 </div>
 </div>
 
@@ -276,7 +276,7 @@ body{font-size:16px}
 <span class="chip c-live">On sale</span>
 <h3>Back to the Future <span>— 35mm print</span></h3>
 <p class="where">Majestic Tempe 7</p>
-<p class="body">An actual film print, not a DCP. Majestic runs these irregularly and they are the closest thing the Valley has to a repertory house. The same night, Terror Trader is screening <strong>Ghostbusters</strong> (1984) at Pollack Tempe — a different room and a DCP, but also Tempe and also one night. Three-way collision with the Your Name. previews on the same evening.</p>
+<p class="body">An actual film print, not a DCP. The same night, Terror Trader is screening <strong>Ghostbusters</strong> (1984) at Pollack Tempe — a different room and a DCP, but also Tempe and also one night. Thursday is now a four-way collision in Tempe with the two Odyssey 70mm runs and the Your Name. previews.</p>
 </div>
 </div>
 
@@ -286,7 +286,7 @@ body{font-size:16px}
 <span class="chip c-live">On sale</span>
 <h3>Kubrick Spotlight <span>— six films, Aug 15 – Sep 2</span></h3>
 <p class="where">Harkins, multiple locations</p>
-<p class="body">2001, Dr. Strangelove, A Clockwork Orange, The Shining, Barry Lyndon, Full Metal Jacket. 2001 plays Aug 15, 16 and 19. If you see one thing this month, this is it.</p>
+<p class="body">2001, Dr. Strangelove, A Clockwork Orange, The Shining, Barry Lyndon, Full Metal Jacket. 2001 plays Aug 15, 16 and 19; Dr. Strangelove Aug 17; A Clockwork Orange Aug 24; Barry Lyndon Aug 31. If you see one series this month, this is it.</p>
 </div>
 </div>
 
@@ -296,7 +296,7 @@ body{font-size:16px}
 <span class="chip c-live">On sale</span>
 <h3>La La Land <span>— 10th anniversary, Dolby Cinema</span></h3>
 <p class="where">AMC Mesa Grand 14 · plus Deer Valley, Desert Ridge, Westgate</p>
-<p class="body">Dolby Vision and Atmos, exclusive to Dolby Cinema at AMC, and the first time the film has been presented in the format. The run is no longer Aug 16–19 only — AMC has added <strong>Aug 22</strong>: Deer Valley 12:00 PM, Desert Ridge 1:15 PM, Westgate 4:00 PM. If Aug 18 collides with something, Aug 22 is now a clean fallback.</p>
+<p class="body">Dolby Vision and Atmos, exclusive to Dolby Cinema at AMC, and the first time the film has been presented in the format. The run is not Aug 16–19 only — AMC has added <strong>Aug 22</strong>: Deer Valley 12:00 PM, Desert Ridge 1:15 PM, Westgate 4:00 PM. If Aug 18 collides with something, Aug 22 is a clean fallback.</p>
 </div>
 </div>
 
@@ -306,7 +306,7 @@ body{font-size:16px}
 <span class="chip c-enter">Free — enter to win</span>
 <h3>Mutiny <span>— advance screening</span></h3>
 <p class="where">Harkins Camelview at Fashion Square · 7:00 PM</p>
-<p class="body">Posted Aug 5, ahead of the aggregators. Link: <strong>lionsgatescreenings.com/MUTRCCPHX</strong>; Mind on Movies and Cult Classics AZ are carrying it as second and third entry points. Aggregators file this one under Scottsdale, not Phoenix or Tempe. Collides with La La Land at Mesa Grand — but La La Land now also plays Aug 22, so take the screening.</p>
+<p class="body">Posted Aug 5 and still the newest Phoenix pass anywhere — nothing has opened in the six days since. Link: <strong>lionsgatescreenings.com/MUTRCCPHX</strong>; Mind on Movies and Cult Classics AZ are second and third entry points, and they draw independently, so enter all three. Aggregators file this one under Scottsdale, not Phoenix or Tempe. Collides with La La Land at Mesa Grand — but La La Land also plays Aug 22, so take the screening.</p>
 </div>
 </div>
 
@@ -332,10 +332,10 @@ body{font-size:16px}
 <h3>Akira <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Fri Sep 4, 2026</span>
 </div>
-<p>The 4K restoration in IMAX, from Crunchyroll and Sony, in both subtitled and dubbed versions. Announced July 2. No theater list and no on-sale date. Today's check went a step further than the last few: the film is missing not only from Harkins' anime series page — which still lists only the two Your Name. versions and Your Letter — but from Harkins' entire Coming Soon catalogue, which was read in full. Re-checked today across all 247 titles in that catalogue: still absent. It has not been booked at Harkins at all. One caution for anyone repeating the check — the catalogue does contain the string "Akira", but it belongs to an actor named Akira Jackson in an unrelated cast list, not to the film. Twenty-five days out, which makes the next two weeks the realistic window.</p>
+<p>The 4K restoration in IMAX, from Crunchyroll and Sony, in both subtitled and dubbed versions. Announced July 2. Still no theater list and no on-sale date. Harkins' full Coming Soon catalogue was read again today and the only match for "Akira" in it is an actor's name in the cast list of an unrelated film — the title has not been booked at Harkins. It is also absent from cmiphx.com's calendar entirely. Twenty-four days out.</p>
 <div class="tell">
 <b>Where it shows up first</b>
-Harkins files anime under a dedicated series page rather than a standalone listing, so <strong>harkins.com/events-and-series/anime-at-harkins</strong> will likely show it before any press release. Watch Crunchyroll's news page and @Crunchyroll too. Two separate traps in search results: the leftover 2020 Funimation run is still live on AMC, Fandango and imax.com, and the July 2–4 announcement write-ups tell readers to "reserve your tickets now" as launch boilerplate. Neither reflects a purchasable Phoenix showtime — none exists yet.
+Harkins files anime under a dedicated series page rather than a standalone listing, so <strong>harkins.com/events-and-series/anime-at-harkins</strong> will likely show it before any press release. Watch Crunchyroll's news page and @Crunchyroll too. Two standing traps: the leftover 2020 Funimation run is still live on AMC, Fandango and imax.com with a 2020 date, and search summaries of the July 2–4 announcement still assert that "tickets are now on sale." They are not — that line is launch boilerplate from the press release, and no purchasable Phoenix showtime exists.
 </div>
 </div>
 
@@ -347,7 +347,7 @@ Harkins files anime under a dedicated series page rather than a standalone listi
 <p>The April presale is gone — opening-weekend IMAX 70mm at Arizona Mills sold out. Wave one went on sale April 6 with about half an hour's public notice, crashed the AMC app, and resold for around $1,000. Harkins added a second daily showtime days later; that went too. But that was a presale at one theater, not the general on-sale, which still has not happened. Nothing new surfaced today.</p>
 <div class="tell">
 <b>What's still coming</b>
-General on-sale has not happened. The film has a three-week global IMAX exclusivity window, so a run past Dec 20 is close to certain, and venues have said more opening-weekend showtimes will be added. Both Dune drops were announced on Harkins' Facebook and email list first — get on the list, that is the whole strategy.
+General on-sale has not happened. The film has a three-week global IMAX exclusivity window, so a run past Dec 20 is close to certain, and venues have said more opening-weekend showtimes will be added. Both Dune drops were announced on Harkins' Facebook and email list first — get on the list, that is the whole strategy. Worth noting that Arizona Mills is currently proving it will schedule 1:30 AM IMAX 70mm shows when demand justifies it, which is a realistic shape for the Dune overflow.
 </div>
 </div>
 
@@ -356,14 +356,11 @@ General on-sale has not happened. The film has a three-week global IMAX exclusiv
 <h3>LOTR Extended Editions <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Sep 4, 5, 6</span>
 </div>
-<p>All three extended cuts across three nights at Harkins. Roughly 3h48, 3h55 and 4h23 — about eleven and a half hours total. This is <em>not</em> the national Fathom event; that ran in January. It's a Harkins in-house booking, so there will be no national coverage announcing it. All three nights are now dated in Harkins’ own catalogue, which is new today: Fellowship on <strong>Sep 4</strong> (3h48), The Two Towers on <strong>Sep 5</strong> (3h55) and The Return of the King on <strong>Sep 6</strong> (4h23). Yesterday only the Fellowship date was confirmed. All three still show no tickets and no presale flag, so nothing is purchasable — but the schedule is no longer guesswork.</p>
+<p>All three extended cuts across three nights at Harkins. Roughly 3h48, 3h55 and 4h23 — about eleven and a half hours total. This is <em>not</em> the national Fathom event; that ran January 16–19 and 23–25, 2026. It is a Harkins in-house booking, so there will be no national coverage announcing it.</p>
+<p><strong>New today:</strong> a series named <strong>"Lord of the Rings Extended Cut Series"</strong> now appears in Harkins' theatre-level events-and-series catalogue, read directly from the site's page data at Arizona Mills. That is the first time the series has been findable by name anywhere on harkins.com. Treat it as a real but limited signal: this catalogue appears to be the chain-wide list rather than a per-theatre slate, so its presence is not proof of a booking at any particular location.</p>
 <div class="tell">
-<b>Confirmed — the series exists in Harkins' catalogue</b>
-Reading the events-and-series data attached to a Harkins theatre page directly turns up a <strong>Lord of the Rings Extended Cut Series</strong> entry with all three extended editions listed under it, and a description reading "Join Harkins for The Lord of the Rings Extended Cut Series starting at CINÉ XL® locations." That is the first confirmation of the format. The public page at <strong>harkins.com/events-and-series/lord-of-the-rings-extended-cut-series</strong> still returns Page Not Found, and no showtimes or prices are attached anywhere, so nothing is buyable yet — but the booking is real and CINÉ XL is confirmed. The entry cannot be dated, so do not read it as an announcement — but it has now held for two consecutive days alongside dated listings for all three films.
-</div>
-<div class="tell">
-<b>What to expect</b>
-When Harkins ran this before, it played in CINÉ XL — their large format with Dolby Atmos and 4K laser — at Arizona Mills, Tempe Marketplace, Chandler Fashion, SanTan Village, Scottsdale 101 and Estrella Falls, at $8 a film or $30 for a series pass including popcorn each night. The pass is still not up: <strong>harkins.com/store/tickets-vouchers</strong> lists a $30 Harry Potter all-access pass and a $45 Studio Ghibli Fest pass, nothing for LOTR. A product URL, <strong>harkins.com/store/products/lotr-series-pass</strong>, does exist in search indexes but renders empty and cannot be dated — most likely left over from the January run. That the Harry Potter pass appeared roughly three weeks ahead of its run is still the best timing clue available. Two other chains are running the theatrical cuts around the same window — FatCats through August, with Two Towers on sale for Aug 10–13, and RoadHouse Scottsdale on Sep 7–23.
+<b>What is still missing</b>
+Tickets. The movie pages for all three films were checked again today, both on the default date and on Sep 4 explicitly, and every one returns an empty showtimes list — nothing is purchasable. The store at <strong>harkins.com/store/tickets-vouchers</strong> was re-read and still carries only the $30 Harry Potter all-access pass and the $45 Studio Ghibli Fest pass; there is no LOTR pass. A <strong>harkins.com/store/products/lotr-series-pass</strong> URL exists in search indexes but renders empty and cannot be dated — most likely left over from January. When Harkins ran this before it played in CINÉ XL at Arizona Mills, Tempe Marketplace, Chandler Fashion, SanTan Village, Scottsdale 101 and Estrella Falls, at $8 a film or $30 for a series pass with popcorn each night. The Harry Potter pass appeared roughly three weeks ahead of its run, which puts the LOTR pass, if it comes, right about now.
 </div>
 </div>
 
@@ -372,7 +369,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <h3>Star Wars <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Fri Feb 19, 2027</span>
 </div>
-<p>The 1977 original, presented as audiences first saw it, for the 50th anniversary. IMAX confirmed the slot in its July investor presentation, but Lucasfilm still hasn't announced ticket timing, theaters, run length, or whether any screenings use IMAX film projection. StarWars.com still points readers back to itself for ticket news and has not posted any. If you see April 30 listed anywhere, that's the old date.</p>
+<p>The 1977 original, presented as audiences first saw it, for the 50th anniversary. IMAX confirmed the slot in its July investor presentation, and coverage re-checked today still agrees on the Feb 19, 2027 date and the IMAX framing. Lucasfilm has still not announced ticket timing, participating theaters, run length, or whether any screenings use IMAX film projection. StarWars.com continues to point readers back to itself for ticket news and has posted none. If you see April 30 listed anywhere, that is the old date.</p>
 </div>
 
 <div class="watch">
@@ -380,7 +377,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <h3>The Prestige <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Format unconfirmed</span></h3>
 <span class="rel">Thu Jan 21, 2027</span>
 </div>
-<p>Nolan confirmed a 70mm upgrade for the 20th anniversary, describing 70mm blow-ups from the original 35mm anamorphic photography. Coverage is still split and checking again today did not resolve it — several outlets report IMAX 70mm outright, while Nolan's own quoted remarks say only 70mm, and no distributor has clarified. That distinction decides whether Arizona Mills can even play it, so treat it as standard 70mm until Warner says otherwise.</p>
+<p>Nolan confirmed a 70mm upgrade for the 20th anniversary, describing 70mm blow-ups from the original 35mm anamorphic photography, with the conversion work starting in the weeks after the July announcement. Checking again today did not resolve the format question: several outlets report IMAX 70mm outright, while Nolan's own quoted remarks say only 70mm, and no distributor has clarified. That distinction decides whether Arizona Mills can play it in 1.43:1 or only as a standard 70mm print, so treat it as standard 70mm until Warner says otherwise.</p>
 </div>
 </section>
 
@@ -414,7 +411,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>Harry Potter 25th <span>— all eight films, Aug 27 – Sep 3</span></h3>
 <p class="where">AMC, Harkins, Cinemark, Regal, Majestic</p>
-<p class="body">Harkins is selling a <strong>Back to Hogwarts All Access Pass for $30</strong> through its online store — re-verified today on <strong>harkins.com/store/tickets-vouchers</strong>. Sorcerer's Stone also plays in 3D. Every chain has its own collectible cups and buckets; Cinemark's are already selling online. Neither the Dolby Cinema run nor a 4D booking at the new Norterra auditorium has been scheduled yet, though both are still listed as possible.</p>
+<p class="body">Harkins is selling a <strong>Back to Hogwarts All Access Pass for $30</strong> through its online store — re-verified today. Sorcerer's Stone also plays in 3D. Every chain has its own collectible cups and buckets; Cinemark's are already selling online. Neither the Dolby Cinema run nor a 4D booking at the new Norterra auditorium has been scheduled.</p>
 </div>
 </div>
 
@@ -424,7 +421,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>Rocky Horror <span>— and House (1977) the same night</span></h3>
 <p class="where">Majestic Tempe · House at Hello Lincoln, via Cult Classics AZ</p>
-<p class="body">Majestic has put Rocky Horror on sale for Aug 29 and again for Sep 26. Unrelated but the same evening, Cult Classics is screening Nobuhiko Obayashi's <em>House</em> — the closest thing to a genuine oddity on this list.</p>
+<p class="body">Majestic has Rocky Horror on sale for Aug 29 and again for Sep 26. Unrelated but the same evening, Cult Classics is screening Nobuhiko Obayashi's <em>House</em> — the closest thing to a genuine oddity on this list. Tucson gets its own Rocky Horror at The Loft on Aug 15, two weeks earlier.</p>
 </div>
 </div>
 
@@ -443,7 +440,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-wait">Not on sale</span>
 <h3>Star Trek 60th <span>— four films, Sep 4–7</span></h3>
 <p class="where">Paramount, chains TBA</p>
-<p class="body">The first four features, each paired with one original-series episode: The Motion Picture with <em>The Changeling</em>, Wrath of Khan with <em>Space Seed</em>, Search for Spock with <em>Amok Time</em>, and The Voyage Home with <em>The City on the Edge of Forever</em>.</p>
+<p class="body">The first four features, each paired with one original-series episode: The Motion Picture with <em>The Changeling</em>, Wrath of Khan with <em>Space Seed</em>, Search for Spock with <em>Amok Time</em>, and The Voyage Home with <em>The City on the Edge of Forever</em>. cmiphx.com re-confirmed today that tickets are not on sale yet — twenty-four days out and still nothing purchasable.</p>
 </div>
 </div>
 
@@ -453,7 +450,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>Faust <span>— 1926, live score</span></h3>
 <p class="where">Orpheum Theatre, downtown Phoenix</p>
-<p class="body">Murnau's silent, with the score performed live by the Mysterium Quartet. A hundred-year-old film in a 1929 movie palace. <strong>The Nutty Professor</strong> 30th anniversary also plays Sep 6 and 9 at AMC, Harkins and Regal, on sale now. If you miss it, the Loft in Tucson runs the same film with a live score by The Invincible Czars ten days earlier, on Aug 27 — see the Tucson tab.</p>
+<p class="body">Murnau's silent, with the score performed live by the Mysterium Quartet. A hundred-year-old film in a 1929 movie palace. Note that Tucson gets the same film with a <em>different</em> live score ten days earlier — The Invincible Czars at The Loft on Aug 27. Two different ensembles, two different scores, same centenary. See the Tucson tab. <strong>The Nutty Professor</strong> 30th anniversary also plays Sep 6 and 9 at AMC, Harkins and Regal, on sale now.</p>
 </div>
 </div>
 
@@ -464,6 +461,16 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <h3>The Passion of the Christ <span>— 2004, Sep 10–17</span></h3>
 <p class="where">AMC, Cinemark, Regal · Majestic to follow</p>
 <p class="body">A Fathom booking. On sale at the three national chains; Majestic has a page up but has not opened sales yet.</p>
+</div>
+</div>
+
+<div class="stub">
+<div class="when"><span class="d">10</span><span class="m">Sep</span></div>
+<div>
+<span class="chip c-live">On sale</span>
+<h3>Cat on a Hot Tin Roof <span>— 1958, Sep 10 and 13</span></h3>
+<p class="where">AMC Desert Ridge 18 · Silver Screen series</p>
+<p class="body">Two dates, one location — Desert Ridge is the only Valley house carrying it. Added to the calendar since the last check here.</p>
 </div>
 </div>
 
@@ -483,7 +490,6 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>The Iron Giant <span>— 1999</span></h3>
 <p class="where">Majestic Tempe · History of the Future series</p>
-<p class="body">Went on sale this week alongside the rest of Majestic's September calendar.</p>
 </div>
 </div>
 
@@ -523,7 +529,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-wait">Not on sale</span>
 <h3>Avengers: Endgame <span>— IMAX version</span></h3>
 <p class="where">AMC, locations TBA</p>
-<p class="body">The IMAX cut, back on IMAX screens for the first time since 2019. AMC is the listed chain, which puts Mesa Grand and Desert Ridge in play; Arizona Mills is a Harkins house and is not currently attached. No on-sale date yet.</p>
+<p class="body">The IMAX cut, back on IMAX screens for the first time since 2019, with a Dolby Cinema version listed alongside it. AMC is the listed chain, which puts Mesa Grand and Desert Ridge in play; Arizona Mills is a Harkins house and is not currently attached. Still not on sale as of today.</p>
 </div>
 </div>
 
@@ -533,7 +539,6 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>La Bamba <span>— 1987, Soundtrack Cinema</span></h3>
 <p class="where">Majestic Tempe · presented by Zia Records</p>
-<p class="body">Part of Majestic's Soundtrack Cinema Sundays strand. On sale with the rest of its September calendar.</p>
 </div>
 </div>
 
@@ -543,7 +548,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="chip c-live">On sale</span>
 <h3>Ghostbusters <span>— 1984, live score</span></h3>
 <p class="where">Mesa Arts Center</p>
-<p class="body">Full score performed live to picture. VIP packages are being sold separately from standard tickets.</p>
+<p class="body">Full score performed live to picture. VIP packages are sold separately from standard tickets. Tucson's Fox Theatre runs its own Ghostbusters In Concert the very next night, Oct 1 — see the Tucson tab if Sep 30 sells out.</p>
 </div>
 </div>
 </section>
@@ -554,21 +559,22 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <span class="note">Newest first</span>
 </div>
 <ul class="log">
-<li><span class="dt">Aug 10</span><span>Lord of the Rings — all three extended editions now carry dates in Harkins&#8217; own catalogue: Fellowship Sep 4 (3h48), The Two Towers Sep 5 (3h55), The Return of the King Sep 6 (4h23). Yesterday only the Fellowship date was confirmed. Still no tickets, no presale flag, and no series pass in the Harkins store.</span></li>
-<li><span class="dt">Aug 10</span><span>Akira re-checked against all 247 titles in Harkins&#8217; catalogue and still absent — it has not been booked at Harkins at all. A caution for anyone repeating the check: the catalogue does contain the string &#8220;Akira&#8221;, but it is an actor&#8217;s name in an unrelated cast list, not the film.</span></li>
-<li><span class="dt">Aug 10</span><span>Nothing else moved in the metro. No new advance screening passes on any aggregator page, Red Carpet Crash&#8217;s newest Phoenix post is still Mutiny from Aug 5, and cmiphx.com has posted no news since Aug 7. The PAW Patrol screening has passed and has been dropped from Act on these.</span></li>
-<li><span class="dt">Aug 9</span><span>Tucson now has its own tab on this page, with the same four sections and the same daily checks. See the Tucson tab for what is playing there.</span></li>
-<li><span class="dt">Aug 9</span><span>Lord of the Rings — a "Lord of the Rings Extended Cut Series" entry now exists in Harkins' events-and-series data, with all three extended editions attached and a description confirming it starts at CINÉ XL locations. The public series page still 404s and no showtimes or prices exist, so nothing is buyable. Cannot be dated, so not necessarily new today.</span></li>
-<li><span class="dt">Aug 9</span><span>Second check of the day found nothing else moving in the metro. No new passes on advancescreenings, Red Carpet Crash's newest Phoenix post is still Mutiny from Aug 5, and the four open screenings are unchanged.</span></li>
-<li><span class="dt">Aug 9</span><span>cmiphx.com lists Pollack Cinemas' weekly classics — Mean Girls and 101 Dalmatians new this week, with The Aristocats, E.T., Jaws and Spirited Away held over. No individual showtimes published; check Pollack directly.</span></li>
-<li><span class="dt">Aug 9</span><span>Nothing moved in the morning run. The only addition anywhere was a third outlet (Culturizando) for the Peoria PAW Patrol screening.</span></li>
-<li><span class="dt">Aug 9</span><span>Akira checked harder than before — it is absent from Harkins' full Coming Soon catalogue, not just the anime series page. Harkins has not booked it at all yet. Twenty-six days to release.</span></li>
-<li><span class="dt">Aug 9</span><span>Added — Majestic's Titanic Tea Time dates (Tempe Sep 20, Chandler Sep 26, Gilbert Sep 27) and La Bamba on Sep 27, both on sale. Announced Aug 7 and missed in that day's update here.</span></li>
+<li><span class="dt">Aug 11</span><span>The Odyssey is on two 70mm screens in Tempe and this page had neither. Arizona Mills is running it in IMAX 70mm with five showings a day including a 1:30 AM, confirmed on the schedule through Aug 20. Harkins Tempe Marketplace is running a 70mm non-IMAX print — and that run ends Thursday Aug 13.</span></li>
+<li><span class="dt">Aug 11</span><span>A series named "Lord of the Rings Extended Cut Series" now appears in Harkins' theatre-level events catalogue, the first time it has been findable by name on harkins.com. Still no showtimes on any of the three movie pages, including Sep 4 checked directly, and still no series pass in the store.</span></li>
+<li><span class="dt">Aug 11</span><span>Akira re-checked and still not booked. The only "Akira" in Harkins' Coming Soon catalogue is an actor's name in an unrelated cast list. Twenty-four days to release.</span></li>
+<li><span class="dt">Aug 11</span><span>Added — Do the Right Thing at the Phoenix Art Museum on Aug 12, and Cat on a Hot Tin Roof at AMC Desert Ridge on Sep 10 and 13.</span></li>
+<li><span class="dt">Aug 11</span><span>No new advance screening passes. Red Carpet Crash's newest Phoenix post is still Mutiny from Aug 5, and the aggregators show nothing added since. Star Trek 60th re-confirmed as not on sale.</span></li>
+<li><span class="dt">Aug 11</span><span>This report now covers Tucson on a second tab. Same three checks, same watchlist, filtered for whether an item justifies the hundred-mile drive.</span></li>
+<li><span class="dt">Aug 9</span><span>Nothing moved. No new passes anywhere in the metro, cmiphx.com had posted no news since Aug 7, and the only addition was a third outlet for the Peoria PAW Patrol screening.</span></li>
+<li><span class="dt">Aug 9</span><span>Added — Majestic's Titanic Tea Time dates (Tempe Sep 20, Chandler Sep 26, Gilbert Sep 27) and La Bamba on Sep 27, both on sale.</span></li>
 <li><span class="dt">Aug 8</span><span>Your Name. is on sale, and it plays a day earlier than listed. Harkins has live Thursday-preview showtimes for Aug 13 — Arizona Mills 5:00 and 10:25 PM, Tempe Marketplace 5:15 PM, Chandler Fashion 5:00 and 10:00 PM, Arrowhead Fountains 5:00 and 10:20 PM. All Digital; the Arizona Mills showings are not on its IMAX screen.</span></li>
 <li><span class="dt">Aug 8</span><span>Correction — the day before, this page listed Your Name. as not on sale and called the Aug 13 date an unverified guess from a URL. The showtimes rendered and the date is confirmed.</span></li>
-<li><span class="dt">Aug 8</span><span>Akira is still not on sale. The July announcement articles telling readers to "reserve your tickets now" are launch boilerplate, not a Phoenix on-sale.</span></li>
 <li><span class="dt">Aug 8</span><span>A lotr-series-pass product URL exists on harkins.com but renders empty and cannot be dated — most likely left over from the January run. Do not read it as a live listing.</span></li>
 <li><span class="dt">Aug 8</span><span>The End of Oak Street picked up a sixth outlet (Zia Records) and Mutiny a third (Cult Classics AZ) — same two screenings, more chances to enter.</span></li>
+<li><span class="dt">Aug 7</span><span>Inglourious Basterds gets a 35mm run at Majestic Tempe, Sep 21–22. On sale now — the strongest addition that week.</span></li>
+<li><span class="dt">Aug 7</span><span>Correction — La La Land's Dolby Cinema run is not Aug 16–19 only. AMC has added Aug 22 at Deer Valley (12:00 PM), Desert Ridge (1:15 PM) and Westgate (4:00 PM).</span></li>
+<li><span class="dt">Aug 7</span><span>Harkins' store now carries a $30 Harry Potter "Back to Hogwarts" all-access pass for the Aug 27 – Sep 3 run.</span></li>
+<li><span class="dt">Aug 7</span><span>The Transformers: The Movie 40th anniversary is on sale for Sep 17–21 at AMC, Cinemark, Regal and Majestic Chandler.</span></li>
 </ul>
 </section>
 
@@ -580,7 +586,11 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="src">
 <div>
 <h4>cmiphx.com</h4>
-<p>Classic Movies In Phoenix. A hand-kept daily calendar of every repertory and anniversary screening in the metro, with ticket links per chain and honest "not on sale yet" flags. Better than anything the chains publish. There is no Tucson equivalent.</p>
+<p>Classic Movies In Phoenix. A hand-kept daily calendar of every repertory and anniversary screening in the metro, with ticket links per chain and honest "not on sale yet" flags. Better than anything the chains publish. Phoenix-only; there is no Tucson equivalent.</p>
+</div>
+<div>
+<h4>harkins.com page data</h4>
+<p>The site renders blank to automated reads, but the underlying page data carries per-showtime IMAX and 70mm flags and a theatre-level events catalogue. That is how both Odyssey 70mm runs and the LOTR series name were found. Presence in the catalogue is chain-wide, not proof of a local booking.</p>
 </div>
 <div>
 <h4>advancescreenings.com</h4>
@@ -588,34 +598,28 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 </div>
 <div>
 <h4>redcarpetcrash.com</h4>
-<p>Their Phoenix category posts passes roughly a day before the aggregators. Worth checking direct. Mind on Movies' own front page is still serving January 2018 archive content, so treat it as unreliable and use its links only through the aggregators.</p>
+<p>Their Phoenix category posts passes roughly a day before the aggregators. Worth checking direct. Mind on Movies' own front page still serves 2018 archive content, so use its links only through the aggregators.</p>
 </div>
 <div>
 <h4>Harkins email &amp; Facebook</h4>
 <p>Where both Dune drops were announced first, with no press release and about thirty minutes' notice. The single highest-value thing on this list to subscribe to.</p>
 </div>
 <div>
-<h4>harkins.com/events-and-series</h4>
-<p>Anime at Harkins, Studio Ghibli, Tuesday Night Classics, Movies In 35MM, Kubrick Spotlight, Secret Cinema. New bookings appear under a series before they appear anywhere else — and the underlying data on any theatre page lists series that have no public page yet, which is how the LOTR series surfaced. The store's Tickets &amp; Vouchers page is where series passes appear.</p>
-</div>
-<div>
 <h4>Pollack Tempe Cinemas</h4>
-<p>A rotating weekly classics slate, listed through cmiphx.com rather than anywhere reliable of its own. Also polling on Facebook for future classic series — LOTR, the Mummy trilogy, Twilight and Stephen King are on the ballot.</p>
+<p>Currently polling on Facebook for future classic series. LOTR, the Mummy trilogy, Twilight and Stephen King are on the ballot. A vote is free.</p>
 </div>
 </div>
 </section>
 
 </div>
-<!-- ============================ /VALLEY ============================ -->
-
 
 <!-- ============================ TUCSON ============================ -->
 <div class="pane" id="pane-tucson" role="tabpanel" aria-labelledby="tab-tucson" hidden>
 
 <div class="headline">
-<span class="kicker mono">Playing right now</span>
-<h2>The Odyssey is running in 70mm at the Loft, and it is the only 70mm print in Tucson</h2>
-<p>Nolan's new film, on actual 70mm film, on the Loft's Screen 1 — the only 70mm-capable screen in Tucson. The engagement opened Jul 16 and is billed as the exclusive 70mm run in the city. Tickets are on sale at regular admission prices. The run ends Thursday and only four days of showtimes remain, re-confirmed today: 11:30 AM and 3:30 PM today, 11:30 AM / 3:30 PM / 7:30 PM Tuesday and Wednesday, and a single 11:30 AM show Thursday. Nothing is posted beyond Aug 13. Digital showings run alongside it and are cheaper to get into, but they are not the reason to go.</p>
+<span class="kicker mono">Worth the drive</span>
+<h2>Faust turns a hundred and gets a live band, on the Loft's Screen 1, Aug 27</h2>
+<p>The Invincible Czars are touring Murnau's 1926 silent with an original score for flute, violin, clarinet, electric guitar, glockenspiel and drums — bossa nova and Mussorgsky and a little metal, five players live to picture. Thursday Aug 27, 7:00 PM, Screen 1, $22 general and $20 for Loft members, passes not accepted. Phoenix gets <em>Faust</em> too, but on Sep 6 at the Orpheum with the Mysterium Quartet — a completely different ensemble and a completely different score. If you care about the film, the honest answer is that these are two separate events and both are worth going to. This one comes first.</p>
 </div>
 
 <section id="tuc-act">
@@ -625,32 +629,22 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 </div>
 
 <div class="stub">
-<div class="when"><span class="d">10</span><span class="m">Aug</span></div>
+<div class="when"><span class="d">11</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>The Odyssey <span>— 70mm print</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 11:30 AM and 3:30 PM today</p>
-<p class="body">The exclusive 70mm run in Tucson, on the only screen in the city that can play it. Regular admission. Four days left, re-confirmed against the Loft’s showtime grid today: <strong>today</strong> 11:30 AM and 3:30 PM, <strong>Tue Aug 11</strong> and <strong>Wed Aug 12</strong> at 11:30 AM, 3:30 PM and 7:30 PM, and <strong>Thu Aug 13</strong> at 11:30 AM only. Nothing past Aug 13 is posted and the day tabs stop there, so Thursday is the end of the run unless the Loft extends it. <strong>loftcinema.org/film/the-odyssey-in-70mm</strong></p>
-</div>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">10</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>The Day Time Ended <span>— 1980, Mondo Mondays</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 8:00 PM</p>
-<p class="body">The Loft's weekly bad-movie strand. Cheap, one night, and it does not come back.</p>
+<h3>Only Yesterday <span>— 35th anniversary, Ghibli Fest, subtitled</span></h3>
+<p class="where">Galaxy Theatres Tucson · 7:00 PM</p>
+<p class="body">Tonight, and it was 11% sold as of this check, so seats are there. Isao Takahata's 1991 film, Japanese with English subtitles. Harkins sells a $45 Studio Ghibli Fest all-access pass on the Valley side; this is a single Tucson date rather than part of that pass.</p>
 </div>
 </div>
 
 <div class="stub">
 <div class="when"><span class="d">14</span><span class="m">Aug</span></div>
 <div>
-<span class="chip c-wait">Not on sale</span>
+<span class="chip c-live">On sale</span>
 <h3>Train to Busan <span>— 10th anniversary, revived and remastered</span></h3>
-<p class="where">The Loft Cinema · Fri Aug 14 – Sun Aug 16 · $9, members $6</p>
-<p class="body">The Loft has now published the full run and the price — <strong>Friday Aug 14 through Sunday Aug 16</strong>, $9 general and $6 for members, passes accepted — and the listing adds an exclusive ten-minute Q&amp;A with director Yeon Sang-ho after the end credits. Showtimes still are not attached, so nothing is purchasable yet; the dates and price are new today.</p>
+<p class="where">The Loft Cinema · Cult Classics · starts Aug 14</p>
+<p class="body">A multi-day run rather than a single night, which is unusual for the Cult Classics strand. Not currently listed anywhere in the Valley, so this is a Tucson-only booking.</p>
 </div>
 </div>
 
@@ -659,18 +653,8 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div>
 <span class="chip c-live">On sale</span>
 <h3>The Seven Year Itch <span>— Marilyn Monroe 100</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 11:00 AM</p>
-<p class="body">The opening of a citywide Marilyn centennial that runs at both the Loft and the Fox on separate tracks — Hollywood Classics mornings at the Loft, evening shows at the Fox. Worth reading both calendars before you plan a day around it.</p>
-</div>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">15</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>The Rocky Horror Picture Show</h3>
-<p class="where">The Loft Cinema, Screen 1 · 10:00 PM</p>
-<p class="body">The Loft's long-running monthly. Late show, same night as The Seven Year Itch if you want to bookend the day.</p>
+<p class="where">The Loft Cinema · Hollywood Classics · Saturday</p>
+<p class="body">The opening of a Monroe centennial that runs across two venues — The Loft continues with The Misfits (Aug 22) and Niagara (Aug 29), while the Fox Theatre runs its own four-film Marilyn series on Aug 22–23. The two overlap on The Misfits and Niagara; check both before buying. Same night at The Loft, <strong>The Rocky Horror Picture Show</strong> also plays.</p>
 </div>
 </div>
 
@@ -678,9 +662,9 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="when"><span class="d">17</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>The Black Crystal <span>— Mondo Mondays, made in Tucson</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 8:00 PM</p>
-<p class="body">One of three locally shot films the Loft is running this month under a "Made in Tucson" banner — this one, ¡Three Amigos! on Aug 23, and The Wraith on Aug 26.</p>
+<h3>The Black Crystal <span>— Mondo Mondays / Made in Tucson</span></h3>
+<p class="where">The Loft Cinema · Monday</p>
+<p class="body">A locally shot oddity in the Loft's junk-cinema strand. The kind of thing that exists in exactly one city and never travels.</p>
 </div>
 </div>
 
@@ -688,8 +672,9 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="when"><span class="d">19</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Blow-Up <span>— 60th anniversary</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:30 PM</p>
+<h3>Blow-Up <span>— 1966, 60th anniversary</span></h3>
+<p class="where">The Loft Cinema · Wednesday</p>
+<p class="body">Antonioni. One of three 60th-anniversary bookings the Loft is running this month, with The Good, The Bad and the Ugly following on Sep 2.</p>
 </div>
 </div>
 
@@ -697,19 +682,9 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="when"><span class="d">20</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-enter">Free — no ticket needed</span>
-<h3>Obsession <span>— 1976, De Palma</span></h3>
-<p class="where">Main Gate Square, 900 E. 2nd Ave · free outdoor screening</p>
-<p class="body">The Loft programs a free outdoor series at Main Gate Square, presented by the Marshall Foundation, with seating provided. No pass, no entry, no draw — just turn up. Parking is free in Tyndall Garage with merchant validation.</p>
-</div>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">21</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>American Psycho <span>— Cult Classics, from Aug 21</span></h3>
-<p class="where">The Loft Cinema</p>
-<p class="body">On the Loft’s calendar under Cult Classics and missing from this page until today — it was on the Loft schedule before now, so treat this as a gap here rather than a new announcement. A short Cult Classics run rather than a single night.</p>
+<h3>Obsession <span>— outdoors at Main Gate Square</span></h3>
+<p class="where">900 E. 2nd Ave, near University Blvd &amp; Tyndall Ave · Thursday</p>
+<p class="body">De Palma outdoors, free, no ticket and no draw — seating is provided, and parking is free in the Tyndall Garage with validation from any Main Gate merchant. Presented by the Marshall Foundation. The Loft's outdoor series is the cheapest reason on this page to be in Tucson.</p>
 </div>
 </div>
 
@@ -717,9 +692,9 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="when"><span class="d">22</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Marilyn at the Fox <span>— Some Like It Hot and The Misfits</span></h3>
-<p class="where">Fox Tucson Theatre, 17 W. Congress St · 4:00 PM and 7:30 PM · $10 all-in</p>
-<p class="body">Two films in one day in a 1930 downtown movie palace, ten dollars each with fees included. Gentlemen Prefer Blondes (4:00 PM) and Niagara (7:00 PM) follow on Aug 23. The Loft runs The Misfits the same morning at 11:00 AM if the Fox evening is sold out.</p>
+<h3>Marilyn at the Fox <span>— four films across two days, Aug 22–23</span></h3>
+<p class="where">Fox Tucson Theatre, 17 W. Congress St · $10 all in</p>
+<p class="body">Some Like It Hot Aug 22 at 4:00 PM, The Misfits Aug 22 at 7:30 PM, Gentlemen Prefer Blondes Aug 23 at 4:00 PM, Niagara Aug 23 at 7:00 PM. Ten dollars all in, in a 1930 movie palace, and you can do all four in a weekend. Note the overlap with The Loft's Monroe series — The Misfits plays both venues on the same day, and Niagara plays The Loft a week later on Aug 29.</p>
 </div>
 </div>
 
@@ -727,9 +702,9 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <div class="when"><span class="d">23</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>¡Three Amigos! <span>— 40th anniversary, made in Tucson</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 2:00 PM</p>
-<p class="body">Shot at Old Tucson. The 40th falls this year and the Loft is playing it once.</p>
+<h3>¡Three Amigos! <span>— 40th anniversary, Made in Tucson</span></h3>
+<p class="where">The Loft Cinema · Sunday</p>
+<p class="body">Shot at Old Tucson. The Loft leans on the Made in Tucson angle for this one and for The Wraith on Aug 26, also a 40th and also shot locally.</p>
 </div>
 </div>
 </section>
@@ -737,7 +712,7 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <section id="tuc-watchlist">
 <div class="sec-head">
 <h2>The watchlist</h2>
-<span class="note">Same five titles — tracked at Tucson venues</span>
+<span class="note">Same five titles, tracked at Tucson venues</span>
 </div>
 
 <div class="watch">
@@ -745,10 +720,14 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <h3>Akira <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Fri Sep 4, 2026</span>
 </div>
-<p>The Crunchyroll and Sony 4K restoration in IMAX, one day only nationally. Nothing is booked in Tucson. The key fact for this city: <strong>Harkins Tucson Spectrum 18 does not have an IMAX screen.</strong> Its screen formats, read straight from Harkins' own theatre data, are Laser, Digital, 3D, CINÉ 1® and Premium Large Format, with CINÉXL and Dolby Atmos among its amenities — no IMAX anywhere in the list. Third-party listing sites that describe it as "IMAX Plus" are wrong. Tucson's IMAX screen is at <strong>Galaxy Theatres Tucson</strong>, 100 S. Houghton Rd, which maintains a dedicated IMAX showtimes page — and that page was checked again today and still shows no IMAX showtimes listed at all. The Loft is not carrying Akira either; its Sep 4 slate is American Pachuco and Big Trouble in Little China.</p>
+<p>The IMAX 4K restoration. Nothing booked in Tucson, and there is now a real question about whether an IMAX-led release reaches the city at all. Harkins Tucson Spectrum is confirmed from Harkins' own page data to have Laser, Digital, 3D, CINÉ 1® and Premium Large Format — and no IMAX. Galaxy Theatres Tucson is the presumed IMAX house, but see the note below.</p>
+<div class="tell">
+<b>Correction — Tucson's IMAX status is not settled</b>
+This page has been treating Galaxy Theatres Tucson as Tucson's confirmed IMAX screen. Today's check does not support that cleanly. Galaxy's Tucson Experiences page does list IMAX — but that page carries the identical chain-wide experiences text used at Galaxy's other locations, so it is not evidence about Tucson specifically. Meanwhile Tucson's actual showtime grid, read in full today, labels its premium auditoriums <strong>DFX</strong> (Barco 4K laser and Dolby Atmos) and Sony Digital Cinema, with no IMAX-labelled showtime anywhere in the schedule. The two sources conflict and neither is decisive. Until an IMAX showtime actually appears on Galaxy Tucson's grid, assume an IMAX-exclusive title may simply not play Tucson, and plan on Arizona Mills.
+</div>
 <div class="tell">
 <b>Where it shows up first</b>
-<strong>galaxytheatres.com/movie-theater/tucson/imax</strong> is the one page that matters — it is Tucson's only confirmed IMAX screen and it lists showtimes by date. AMC Foothills 15 is described as an IMAX house in third-party directories, but AMC blocks automated checks so that is unverified here; confirm it yourself if Galaxy comes up empty. Watch Crunchyroll's news page for the national theater list. Same two traps as the Valley tab: the leftover 2020 Funimation listings are still live on AMC, Fandango and imax.com, and the July announcement coverage tells readers to reserve tickets as boilerplate. If Tucson gets no IMAX booking, Phoenix is the fallback and Arizona Mills is the best screen in the state.
+<strong>galaxytheatres.com/movie-theater/tucson</strong> — the daily showtime grid, not the Experiences page. Any Tucson booking will surface there before it surfaces anywhere else.
 </div>
 </div>
 
@@ -757,10 +736,10 @@ When Harkins ran this before, it played in CINÉ XL — their large format with 
 <h3>Dune: Part Three <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Dec 17–20 · wide Dec 18</span>
 </div>
-<p>No Tucson presale has happened — the April wave was Arizona Mills only. Tucson has no 1.43:1 IMAX, so the premium options here will be Galaxy Tucson's IMAX screen and Harkins Tucson Spectrum's CINÉ XL. Neither has opened anything. If the point is the 70mm IMAX presentation specifically, that exists at exactly one theater in Arizona and it is in Tempe.</p>
+<p>Nothing on sale in Tucson and no presale here — the April IMAX 70mm wave was Arizona Mills only. Tucson Spectrum is a CINÉ XL house with Dolby Atmos, which is the best large-format option in the city that is actually confirmed to exist, and it will get the film. The IMAX question above applies: for the 1.43:1 presentation the nearest screen is Arizona Mills, a hundred miles up I-10, and that is not going to change.</p>
 <div class="tell">
-<b>What's still coming</b>
-General on-sale has not happened anywhere. Harkins announces on its email list and Facebook first, and those announcements cover the whole chain including Tucson Spectrum, so the Valley tab's advice applies here unchanged — get on the Harkins list. Galaxy runs its own ticketing and will surface its IMAX allocation on its Tucson IMAX page.
+<b>Where it shows up first</b>
+Harkins' email list and Facebook for the Tucson Spectrum CINÉ XL dates — the chain announces centrally and Tucson dates land with the Valley ones. Watch Galaxy Tucson's showtime grid separately in case an IMAX booking materialises.
 </div>
 </div>
 
@@ -769,10 +748,10 @@ General on-sale has not happened anywhere. Harkins announces on its email list a
 <h3>LOTR Extended Editions <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Sep 4, 5, 6</span>
 </div>
-<p>A Harkins in-house booking, so Tucson Spectrum is in play — and Harkins' data attaches a <strong>Lord of the Rings Extended Cut Series</strong> entry, with all three extended editions listed under it, to the Tucson Spectrum theatre page. The series description says it starts at CINÉ XL locations, and Tucson Spectrum is a CINÉ XL house with Dolby Atmos. New today, all three films are dated in Harkins’ catalogue — Fellowship <strong>Sep 4</strong>, The Two Towers <strong>Sep 5</strong>, The Return of the King <strong>Sep 6</strong>, with runtimes of 3h48, 3h55 and 4h23. That firms up the schedule but it is still not a Tucson booking: the public series page returns Page Not Found, no showtimes, prices or presale flag exist on any of the three, and the events list on a Harkins theatre page appears to carry the full chain-wide catalogue rather than a per-theatre slate.</p>
+<p>The "Lord of the Rings Extended Cut Series" now appears by name in Harkins Tucson Spectrum's events-and-series catalogue, read from the site's page data today — the same entry that appeared at Arizona Mills. That is the first time the series has been findable by name at all. It is not proof of a Tucson booking: the catalogue looks chain-wide rather than per-theatre. No showtimes exist on any of the three movie pages, on the default date or on Sep 4 checked directly, and no series pass is in the Harkins store.</p>
 <div class="tell">
-<b>What to watch</b>
-The series pass is the tell. When Harkins ran this before it was $8 a film or $30 for a pass with popcorn each night, sold through <strong>harkins.com/store/tickets-vouchers</strong> — re-read today and still listing only the Harry Potter and Studio Ghibli passes. The Harry Potter pass went up about three weeks before its run, which puts a LOTR pass around mid-August if the September dates hold. There is no national coverage coming for this one, so the Harkins store and email list are the only real sources.
+<b>Why Tucson has a real shot at this one</b>
+Tucson Spectrum is a CINÉ XL house, and the series is flagged as starting at CINÉ XL locations. If it books anywhere outside the Valley, it books here. Same tell as Phoenix: Harkins' email list and the store's Tickets &amp; Vouchers page, which is where the Harry Potter pass appeared about three weeks ahead of its run.
 </div>
 </div>
 
@@ -781,7 +760,7 @@ The series pass is the tell. When Harkins ran this before it was $8 a film or $3
 <h3>Star Wars <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Fri Feb 19, 2027</span>
 </div>
-<p>The 1977 original for the 50th anniversary, presented as audiences first saw it. IMAX confirmed the slot in its July investor presentation; Lucasfilm has announced no ticket timing, theaters, or run length, and nothing indicates whether Tucson gets an IMAX allocation. If it is an IMAX-led release, Galaxy Tucson is the local screen to watch. If you see April 30 listed anywhere, that is the old date.</p>
+<p>The 1977 original for the 50th, confirmed by IMAX for Feb 19, 2027, with no ticket timing, no theater list and no run length announced by Lucasfilm. Because the release is being framed as IMAX-led, Tucson's unresolved IMAX status is the whole question here. If Galaxy Tucson does not have a working IMAX screen, this is an Arizona Mills trip.</p>
 </div>
 
 <div class="watch">
@@ -789,10 +768,10 @@ The series pass is the tell. When Harkins ran this before it was $8 a film or $3
 <h3>The Prestige <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Format unconfirmed</span></h3>
 <span class="rel">Thu Jan 21, 2027</span>
 </div>
-<p>Nolan confirmed a 70mm upgrade for the 20th anniversary, from 70mm blow-ups of the original 35mm anamorphic photography. Coverage is still split between plain 70mm and IMAX 70mm and no distributor has clarified.</p>
+<p>This is the one watchlist title where Tucson may genuinely beat the drive. The Loft's Screen 1 is the only 70mm-capable screen in the city and it is demonstrably running 70mm right now — the Odyssey print has been on it since July 16. Nolan described 70mm blow-ups from the original 35mm anamorphic photography; whether that also means IMAX 70mm is still unresolved, and if it is standard 70mm rather than 1.43:1, the Loft can play it and Arizona Mills holds no advantage.</p>
 <div class="tell">
-<b>Why Tucson has a real shot at this one</b>
-The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated it will book a 70mm engagement and hold it for weeks — the current Odyssey run is billed as Tucson's exclusive 70mm presentation. If The Prestige goes out as standard 70mm rather than IMAX 70mm, the Loft is the most likely venue in southern Arizona, and it is a repertory house that actively pursues these. Watch <strong>loftcinema.org/coming-soon</strong>.
+<b>Where it shows up first</b>
+<strong>loftcinema.org/coming-soon</strong>. The Loft's Coming Soon page currently reaches to Sep 30 and contains no Prestige entry, which is expected five months out. The Loft books these actively and posts them there before anywhere else. A film page reading "Showtimes Coming Soon" means announced but not on sale.
 </div>
 </div>
 </section>
@@ -800,25 +779,15 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <section id="tuc-repertory">
 <div class="sec-head">
 <h2>Playing once only</h2>
-<span class="note">Rest of August into October</span>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">24</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>The Hills Have Eyes Part 2 <span>— Mondo Mondays</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 8:00 PM</p>
-</div>
+<span class="note">Rest of August into early October</span>
 </div>
 
 <div class="stub">
 <div class="when"><span class="d">26</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>The Wraith <span>— 40th anniversary, made in Tucson</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:30 PM</p>
-<p class="body">Shot in and around Tucson in 1986. Charlie Sheen, a Dodge M4S, and the desert.</p>
+<h3>The Wraith <span>— 1986, 40th anniversary, Made in Tucson</span></h3>
+<p class="where">The Loft Cinema · Wednesday</p>
 </div>
 </div>
 
@@ -827,8 +796,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div>
 <span class="chip c-live">On sale</span>
 <h3>Faust <span>— 1926, live score by The Invincible Czars</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:00 PM · $22, members $20</p>
-<p class="body">Murnau's silent at a hundred years old, with a new score performed live by five players on violin, electric guitar, clarinet, bass clarinet, flute, glockenspiel, keyboard and drums. Passes not accepted. The Orpheum in Phoenix runs the same film with a different live ensemble on Sep 6 — see the Valley tab — so this is a real choice, not a conflict.</p>
+<p class="where">The Loft Cinema, Screen 1 · 7:00 PM · $22 / $20 members</p>
+<p class="body">Passes not accepted. Five players live to picture on violin, electric guitar, clarinet, bass clarinet, flute, glockenspiel, keyboard and drums. Phoenix's Faust is a different score by a different ensemble on Sep 6 — see the Valley tab.</p>
 </div>
 </div>
 
@@ -836,9 +805,9 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">28</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-wait">Not on sale</span>
-<h3>Perfect Blue <span>— Satoshi Kon, Aug 28–30</span></h3>
-<p class="where">The Loft Cinema · $9, members $6 · Japanese with English subtitles</p>
-<p class="body">Kon's first film, rarely screened, three days under the Loft's Cult Classics banner. The page is up with prices and dates but showtimes are not attached yet, so nothing is purchasable today. This is the strongest anime booking in southern Arizona this month and the run is short — worth checking the site daily until times post.</p>
+<h3>Perfect Blue <span>— Satoshi Kon, subtitled, Aug 28–30</span></h3>
+<p class="where">The Loft Cinema · Cult Classics · $9 / $6 members</p>
+<p class="body">Announced with prices and dates, but the film page reads "Showtimes Coming Soon" — nothing is purchasable yet. Kon's rarely screened debut, Japanese with English subtitles, passes accepted. Not booked anywhere in the Valley, which makes it the strongest anime reason to drive down this month. Watch the film page for showtimes to post.</p>
 </div>
 </div>
 
@@ -846,27 +815,9 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">29</span><span class="m">Aug</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Niagara <span>— Marilyn Monroe 100</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 11:00 AM</p>
-</div>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">30</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>Fandango <span>— 1985, Loft Staff Selects</span></h3>
-<p class="where">The Loft Cinema</p>
-<p class="body">Kevin Costner’s first lead, shot in west Texas, picked by a Loft staffer. Added to this page today after being missed in the first Tucson build — it was already on the Loft calendar.</p>
-</div>
-</div>
-
-<div class="stub">
-<div class="when"><span class="d">31</span><span class="m">Aug</span></div>
-<div>
-<span class="chip c-live">On sale</span>
-<h3>Attack of the 50 Ft. Woman <span>— Mondo Mondays</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 8:00 PM</p>
+<h3>Niagara <span>— 1953, Marilyn Monroe 100</span></h3>
+<p class="where">The Loft Cinema · Hollywood Classics · Saturday</p>
+<p class="body">Also plays the Fox on Aug 23 at 7:00 PM for $10 all in, a week earlier and cheaper.</p>
 </div>
 </div>
 
@@ -875,8 +826,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div>
 <span class="chip c-live">On sale</span>
 <h3>The Good, The Bad and the Ugly <span>— 60th anniversary</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:00 PM</p>
-<p class="body">Three hours of Leone on the Loft's big screen. One night.</p>
+<p class="where">The Loft Cinema · Wednesday</p>
+<p class="body">Three hours of Leone. The Loft's third 60th-anniversary booking of the season.</p>
 </div>
 </div>
 
@@ -885,8 +836,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div>
 <span class="chip c-live">On sale</span>
 <h3>Blue Velvet <span>— CINEMA '86</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:30 PM</p>
-<p class="body">The opening night of CINEMA '86, a fortieth-anniversary series running through September: Blue Velvet, Down by Law (Sep 10), River's Edge (Sep 15), True Stories (Sep 17), Something Wild (Sep 22) and Sid and Nancy (Sep 24). The single best-programmed strand in either city right now.</p>
+<p class="where">The Loft Cinema · Thursday</p>
+<p class="body">The opening of the Loft's CINEMA '86 strand, which runs all September: Down by Law Sep 10, River's Edge Sep 15, True Stories Sep 17, Something Wild Sep 22, Sid and Nancy Sep 24. Six films, one year, none of them booked in the Valley.</p>
 </div>
 </div>
 
@@ -894,8 +845,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">04</span><span class="m">Sep</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Big Trouble in Little China <span>— 40th anniversary, from Sep 4</span></h3>
-<p class="where">The Loft Cinema · Cult Classics</p>
+<h3>Big Trouble in Little China <span>— 40th anniversary, Cult Classics</span></h3>
+<p class="where">The Loft Cinema · starts Sep 4</p>
 </div>
 </div>
 
@@ -903,9 +854,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">05</span><span class="m">Sep</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>The Maltese Falcon <span>— 85th anniversary, Hollywood Classics</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · Saturday morning</p>
-<p class="body">Huston’s 1941 debut at eighty-five, one showing. The Loft’s Hollywood Classics slot moves from the Marilyn centennial to this in September. Also missed in the first Tucson build rather than newly announced.</p>
+<h3>The Maltese Falcon <span>— 85th anniversary</span></h3>
+<p class="where">The Loft Cinema · Hollywood Classics · Saturday</p>
 </div>
 </div>
 
@@ -913,8 +863,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">11</span><span class="m">Sep</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Aliens <span>— 40th anniversary, from Sep 11</span></h3>
-<p class="where">The Loft Cinema · Cult Classics</p>
+<h3>Aliens <span>— 40th anniversary, Cult Classics</span></h3>
+<p class="where">The Loft Cinema · starts Sep 11</p>
 </div>
 </div>
 
@@ -922,9 +872,18 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">17</span><span class="m">Sep</span></div>
 <div>
 <span class="chip c-enter">Free — no ticket needed</span>
-<h3>Inception <span>— free outdoor screening</span></h3>
-<p class="where">Main Gate Square, 900 E. 2nd Ave · 7:00 PM</p>
-<p class="body">Nolan, outdoors, free, seating provided, presented by the Marshall Foundation. No pass and no draw. The best-value thing on either tab this quarter. Near University Blvd and Tyndall Ave; parking free in Tyndall Garage with merchant validation.</p>
+<h3>Inception <span>— outdoors at Main Gate Square</span></h3>
+<p class="where">900 E. 2nd Ave · 7:00 PM · free admission</p>
+<p class="body">Nolan outdoors for nothing. Seating provided, food and drink from the Main Gate restaurants, free parking in the Tyndall Garage with merchant validation, presented by the Marshall Foundation. No ticket, no draw, no entry — just show up. Given how much of this page is about paying a premium to see Nolan on the right screen, a free 148-minute Inception under the sky is a fair counterweight.</p>
+</div>
+</div>
+
+<div class="stub">
+<div class="when"><span class="d">29</span><span class="m">Sep</span></div>
+<div>
+<span class="chip c-live">On sale</span>
+<h3>Manhattan Short Film Festival 2026 <span>— one night</span></h3>
+<p class="where">The Loft Cinema · Tuesday</p>
 </div>
 </div>
 
@@ -933,8 +892,8 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div>
 <span class="chip c-live">On sale</span>
 <h3>The Shining <span>— Silver Screen Reading Club</span></h3>
-<p class="where">The Loft Cinema, Screen 1 · 7:00 PM</p>
-<p class="body">Kubrick's, paired with the book. Note the Valley runs The Shining too, inside the Harkins Kubrick Spotlight in August — see the Valley tab if you want it sooner.</p>
+<p class="where">The Loft Cinema · Wednesday</p>
+<p class="body">Harkins runs The Shining in its Kubrick Spotlight in the Valley through Sep 2; this is a separate Loft booking a month later with a book-club framing attached.</p>
 </div>
 </div>
 
@@ -942,9 +901,9 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="when"><span class="d">01</span><span class="m">Oct</span></div>
 <div>
 <span class="chip c-live">On sale</span>
-<h3>Ghostbusters In Concert <span>— 1984, live orchestra</span></h3>
-<p class="where">Fox Tucson Theatre · 7:30 PM · $58–$81 all-in</p>
-<p class="body">Full score performed live to picture in the downtown movie palace. The Valley gets its own Ghostbusters live-score night at Mesa Arts Center on Sep 30 — the two are a day apart, so pick by venue and price.</p>
+<h3>Ghostbusters In Concert <span>— live orchestra</span></h3>
+<p class="where">Fox Tucson Theatre · 7:30 PM · $58–$81 all in</p>
+<p class="body">The night after Phoenix's own Ghostbusters live-score show at Mesa Arts Center on Sep 30. Two different presentations of the same idea on consecutive nights a hundred miles apart — if the Mesa date sells out, this is the fallback, and the Fox is the better room.</p>
 </div>
 </div>
 </section>
@@ -955,18 +914,16 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <span class="note">Newest first</span>
 </div>
 <ul class="log">
-<li><span class="dt">Aug 10</span><span>Train to Busan now has a published run and price — Fri Aug 14 through Sun Aug 16, $9 general and $6 members, passes accepted — plus an exclusive ten-minute Q&amp;A with director Yeon Sang-ho after the end credits. Showtimes still are not attached, so there is still nothing to buy.</span></li>
-<li><span class="dt">Aug 10</span><span>Lord of the Rings — Harkins now carries dates for all three extended editions chain-wide: Fellowship Sep 4, The Two Towers Sep 5, The Return of the King Sep 6. Tucson Spectrum is a CINÉ XL house and the series is flagged for CINÉ XL locations, but no Tucson showtimes, prices or presale exist.</span></li>
-<li><span class="dt">Aug 10</span><span>Added — American Psycho (from Aug 21), Fandango (Aug 30) and The Maltese Falcon (Sep 5). All three were already on the Loft calendar and were missed when this tab was built yesterday, so these are gaps here rather than new bookings. Grease Sing-A-Long (Sep 12) and Manhattan Short Film Festival (Sep 29) are also on the Loft calendar and are not carried on this page.</span></li>
-<li><span class="dt">Aug 10</span><span>The Odyssey in 70mm still ends Thu Aug 13. Four days of showtimes remain and the Loft has posted nothing beyond that date.</span></li>
-<li><span class="dt">Aug 10</span><span>Still no free screening passes anywhere in Tucson — advancescreenings lists none and has no registered Tucson outlets, and Red Carpet Crash&#8217;s Tucson category still has no posts. Galaxy&#8217;s Tucson IMAX page shows no IMAX showtimes listed at all.</span></li>
-<li><span class="dt">Aug 9</span><span>First Tucson run. Everything on this tab is new, so this log starts here rather than reporting the whole calendar as a change.</span></li>
-<li><span class="dt">Aug 9</span><span>Established — Harkins Tucson Spectrum 18 has no IMAX screen. Its formats are Laser, Digital, 3D, CINÉ 1® and Premium Large Format, read from Harkins' own theatre data. Listing sites that call it "IMAX Plus" are wrong.</span></li>
-<li><span class="dt">Aug 9</span><span>Established — Tucson's IMAX screen is at Galaxy Theatres Tucson, 100 S. Houghton Rd, with its own IMAX showtimes page. That page shows no IMAX showings at all for Aug 9–12.</span></li>
-<li><span class="dt">Aug 9</span><span>Established — the Loft's Screen 1 is the only 70mm-capable screen in Tucson and is currently running The Odyssey as the city's exclusive 70mm engagement.</span></li>
-<li><span class="dt">Aug 9</span><span>No free advance screening passes are open anywhere in Tucson. advancescreenings.com lists zero Tucson screenings and, unusually, zero registered Tucson outlets. Red Carpet Crash has a Tucson category but it currently has no posts at all.</span></li>
-<li><span class="dt">Aug 9</span><span>Perfect Blue is dated Aug 28–30 at the Loft with prices published, but no showtimes are attached yet, so it is not purchasable.</span></li>
-<li><span class="dt">Aug 9</span><span>Train to Busan is listed as starting Aug 14 at the Loft with no showtimes attached.</span></li>
+<li><span class="dt">Aug 11</span><span>Tucson coverage starts today. Everything in this pane is a first entry rather than a change, so this log begins with the findings that matter most.</span></li>
+<li><span class="dt">Aug 11</span><span>Correction to a standing assumption — Galaxy Theatres Tucson may not have a working IMAX screen. Its Experiences page lists IMAX, but that text is identical chain-wide boilerplate, and Tucson's actual showtime grid uses DFX and Sony Digital Cinema branding with no IMAX showtime anywhere on it. The sources conflict; do not plan an IMAX trip to Tucson on this evidence.</span></li>
+<li><span class="dt">Aug 11</span><span>Harkins Tucson Spectrum re-confirmed as having no IMAX — Laser, Digital, 3D, CINÉ 1® and Premium Large Format, from Harkins' own page data. Third-party directories calling it "IMAX Plus" remain wrong.</span></li>
+<li><span class="dt">Aug 11</span><span>Faust with a live score by The Invincible Czars, Loft Screen 1, Aug 27, $22. Phoenix gets a different Faust with a different ensemble on Sep 6 — these are two separate events, not one tour date listed twice.</span></li>
+<li><span class="dt">Aug 11</span><span>Perfect Blue is announced for Aug 28–30 at the Loft with prices posted, but the film page reads "Showtimes Coming Soon" and nothing is purchasable. Chipped as not on sale.</span></li>
+<li><span class="dt">Aug 11</span><span>Two free outdoor Loft screenings at Main Gate Square with no ticket and no draw — Obsession on Aug 20 and Inception on Sep 17, both 7:00 PM, both free.</span></li>
+<li><span class="dt">Aug 11</span><span>A Marilyn Monroe centennial is running across two Tucson venues at once. The Fox has four films for $10 all in on Aug 22–23; the Loft has three across Aug 15, 22 and 29. They overlap on The Misfits and Niagara.</span></li>
+<li><span class="dt">Aug 11</span><span>The Loft is running The Odyssey in 70mm on Screen 1 and calls it the exclusive 70mm run in Tucson. It is not a reason to drive — Arizona Mills has the same film in true IMAX 70mm, and Tempe Marketplace has a 70mm print through Aug 13.</span></li>
+<li><span class="dt">Aug 11</span><span>Ghostbusters In Concert at the Fox on Oct 1, the night after the Mesa Arts Center show. Useful as a fallback if Mesa sells out.</span></li>
+<li><span class="dt">Aug 11</span><span>No free advance screening passes are open anywhere in Tucson. Red Carpet Crash's Tucson category returns no posts at all, and advancescreenings.com still lists zero registered Tucson outlets. This is the normal state, not a failed check.</span></li>
 </ul>
 </section>
 
@@ -978,62 +935,57 @@ The Loft's Screen 1 runs DCP, 35mm and 70mm, and the Loft has just demonstrated 
 <div class="src">
 <div>
 <h4>loftcinema.org</h4>
-<p>The single most important source for Tucson, and it does more of the job than any one Phoenix source does. A nonprofit five-screen house with 35mm and 70mm on Screen 1. The Coming Soon page carries dated listings six weeks out with series labels; individual film pages give exact dates, prices and whether showtimes have posted. Series worth tracking: Cult Classics, Mondo Mondays, CINEMA '86, Hollywood Classics, Main Gate Square, Loft Film Fest.</p>
+<p>The single most important Tucson source, carrying more of the load than any one Phoenix source does. Coming Soon gives dated listings about six weeks out with series labels. Confirm any specific date on the individual film page — the flattened showtimes grid is easy to misread.</p>
+</div>
+<div>
+<h4>The Loft, Screen 1</h4>
+<p>DCP, 35mm and 70mm — the only 70mm-capable screen in Tucson, currently running The Odyssey. This is the screen that makes The Prestige a live possibility here in January 2027.</p>
 </div>
 <div>
 <h4>foxtucson.com/events</h4>
-<p>The 1930 downtown movie palace. Its film programming hides inside a mixed music-and-comedy events calendar under the "Picture Palace" filter, so scan the whole list. Currently the Marilyn Fox Film Series at $10 all-in, and live-score events like Ghostbusters In Concert.</p>
+<p>Film is mixed into a music-and-comedy calendar under the Picture Palace filter, so scan the whole list rather than trusting the filter. Classics run $10 all in; live-score events run at concert prices.</p>
 </div>
 <div>
-<h4>galaxytheatres.com/movie-theater/tucson</h4>
-<p>Tucson's IMAX screen, with a dedicated /imax showtimes page listing by date — the place any IMAX event booking will surface. Also runs Flashback Cinema and Classic Monday Movies, though the Flashback blog post is often months stale; trust the showtimes, not the blog.</p>
-</div>
-<div>
-<h4>redcarpetcrash.com — Tucson</h4>
-<p>Has a dedicated Tucson category at /free-movie-screenings/tucson/. It is empty as of today, but it is the same outlet that beats the aggregators to Phoenix passes by a day, so it is the first place a Tucson pass would appear.</p>
-</div>
-<div>
-<h4>advancescreenings.com/city/us/az/tucson</h4>
-<p>Thin by comparison with Phoenix — currently no screenings and no registered outlets at all. The one named Tucson outlet on the site is 43KIX Tucson, which distributes through Facebook and cannot be read automatically. Expect long empty stretches and do not mistake that for a broken check.</p>
+<h4>galaxytheatres.com</h4>
+<p>Tucson's premium-format house. Trust the daily showtime grid, not the Experiences page and not the Flashback Cinema blog post, which is frequently months stale. The IMAX question above turns entirely on which of those you believe.</p>
 </div>
 <div>
 <h4>harkins.com/theatres/tucson-spectrum</h4>
-<p>Harkins' Tucson house — CINÉ XL with Dolby Atmos, no IMAX. Chain-wide series like the Kubrick Spotlight, Tuesday Night Classics and the pending LOTR extended-cut series are booked centrally, so Valley announcements usually mean Tucson dates too. The page renders blank to automated reads; the data behind it does not.</p>
+<p>CINÉ XL with Dolby Atmos, no IMAX. Chain-wide series are booked centrally, so a Valley series announcement usually means Tucson dates follow.</p>
+</div>
+<div>
+<h4>Tucson passes</h4>
+<p>Red Carpet Crash keeps a dedicated Tucson category and would be first to post one. advancescreenings.com has no registered Tucson outlets at all. The one named outlet, 43KIX Tucson, distributes through Facebook and cannot be read automatically. Expect this section to stay empty.</p>
 </div>
 </div>
 </section>
 
 </div>
-<!-- ============================ /TUCSON ============================ -->
 
 </main>
 
 <footer class="wrap">
-<p>Six IMAX screens exist in the Phoenix metro: Harkins Arizona Mills (the only one in Arizona with 70mm film capability), AMC Mesa Grand, Desert Ridge, Deer Valley, Westgate, and Superstition East. In Tucson, the confirmed IMAX screen is Galaxy Theatres Tucson; the only 70mm-capable screen is the Loft's Screen 1.</p>
-<p>Everything above was verified on the date shown. Sold-out status, showtimes and pass availability change fast — confirm before you drive. Tucson is about a hundred miles from Tempe; check twice before making that one.</p>
+<p>Six IMAX screens exist in the Phoenix metro: Harkins Arizona Mills (the only one in Arizona with 70mm film capability, and one of 41 worldwide), AMC Mesa Grand, Desert Ridge, Deer Valley, Westgate, and Superstition East. Tucson's IMAX status is currently unverified — see the Tucson tab.</p>
+<p>Tucson is about a hundred miles from Tempe. An item earns its place on that tab by being 70mm, a film print, a live score, anime, or something that does not play the Valley at all.</p>
+<p>Everything above was verified on the date shown. Sold-out status, showtimes and pass availability change fast — confirm before you drive.</p>
 <p class="mono" style="color:var(--mint);margin-top:16px">Valley Screen Report · Tempe, AZ</p>
 </footer>
 
 <script>
 (function(){
-  var tabs = [
-    {btn: document.getElementById('tab-valley'), pane: document.getElementById('pane-valley'), hash: '#valley'},
-    {btn: document.getElementById('tab-tucson'), pane: document.getElementById('pane-tucson'), hash: '#tucson'}
-  ];
-  function show(name, push){
-    tabs.forEach(function(t){
-      var on = (t.hash === '#' + name);
-      t.btn.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.pane.hidden = !on;
-    });
-    if (push && history.replaceState) history.replaceState(null, '', '#' + name);
-    window.scrollTo(0, 0);
-  }
-  tabs.forEach(function(t){
-    t.btn.addEventListener('click', function(){ show(t.hash.slice(1), true); });
+var tabs = {valley: document.getElementById('tab-valley'), tucson: document.getElementById('tab-tucson')};
+var panes = {valley: document.getElementById('pane-valley'), tucson: document.getElementById('pane-tucson')};
+function show(which){
+  if(!tabs[which]) which = 'valley';
+  Object.keys(tabs).forEach(function(k){
+    tabs[k].setAttribute('aria-selected', k === which ? 'true' : 'false');
+    panes[k].hidden = (k !== which);
   });
-  var start = (location.hash || '').replace('#','').toLowerCase();
-  show(start === 'tucson' ? 'tucson' : 'valley', false);
+}
+tabs.valley.addEventListener('click', function(){ show('valley'); history.replaceState(null,'','#valley'); });
+tabs.tucson.addEventListener('click', function(){ show('tucson'); history.replaceState(null,'','#tucson'); });
+show(location.hash === '#tucson' ? 'tucson' : 'valley');
+window.addEventListener('hashchange', function(){ show(location.hash === '#tucson' ? 'tucson' : 'valley'); });
 })();
 </script>
 
