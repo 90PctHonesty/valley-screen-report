@@ -210,10 +210,9 @@ body{font-size:16px}
 <div class="pane" id="pane-valley" role="tabpanel" aria-labelledby="tab-valley">
 
 <div class="headline">
-<span class="kicker mono">On sale now</span>
-<h2>Harkins has two IMAX 70mm Dune screenings at Arizona Mills, Dec 14 and 15, and they are bookable today</h2>
-<p>Both at <strong>6:00 PM</strong>, three days before the film opens, filed as <strong>Insider Screenings (IMAX 70mm)</strong>. Each carries the IMAX and 70mm flags and a live ticketing session, and neither was sold out at the time of this check. These are the only IMAX 70mm Dune showings bookable anywhere in the Harkins system. The catch: Arizona Mills has no general-run Dune showings loaded yet — its 1.43:1 screen holds exactly these two sessions — so whether a wider IMAX 70mm run follows is unknown. Separately, the general Dune run is now live across at least eleven Valley houses from Dec 17, all CINÉ XL. Note the name: Insider Perks is Harkins’ loyalty programme, and this page could not confirm whether these two nights are open to everyone. Detail and the Tucson comparison are in the watchlist below.</p>
-<p>Also today, and on a shorter fuse: <strong>the 70mm print of The Odyssey leaves Tempe Marketplace after Aug 20</strong>. Four showings a day at <strong>Harkins Tempe Marketplace</strong> — today they are 10:45 AM, 2:40, 6:35 and 10:20 PM, shifting to 11:00 AM, 2:45, 6:30 and 10:15 PM from Aug 17. Harkins’ schedule data still stops the 70mm run on <strong>Thursday Aug 20</strong>; Aug 21 and Aug 22 both return no 70mm showing. That is the current plan, not a guarantee — this page called Aug 13 the final night and was wrong when Friday filled in afterwards, so check again before you assume it is over. <strong>Harkins Arizona Mills</strong> is a separate and longer proposition: true IMAX 70mm on the only 1.43:1 screen in Arizona, still selling and now bookable past <strong>Sep 15</strong>. Collectible film strips continue for 35mm and 70mm ticketholders while supplies last. Tucson has its own 70mm print of the same film, on the Loft’s Screen 1 — see the Tucson tab.</p>
+<span class="kicker mono">Six days left</span>
+<h2>The 70mm print of The Odyssey leaves Tempe Marketplace after Aug 20</h2>
+<p>Four showings a day at <strong>Harkins Tempe Marketplace</strong> — today they are 10:45 AM, 2:40, 6:35 and 10:20 PM, shifting to 11:00 AM, 2:45, 6:30 and 10:15 PM from Aug 17. Harkins’ schedule data still stops the 70mm run on <strong>Thursday Aug 20</strong>; Aug 21 and Aug 22 both return no 70mm showing. That is the current plan, not a guarantee — this page called Aug 13 the final night and was wrong when Friday filled in afterwards, so check again before you assume it is over. <strong>Harkins Arizona Mills</strong> is a separate and longer proposition: true IMAX 70mm on the only 1.43:1 screen in Arizona, still selling and now bookable past <strong>Sep 15</strong>. Collectible film strips continue for 35mm and 70mm ticketholders while supplies last. Tucson has its own 70mm print of the same film, on the Loft’s Screen 1 — see the Tucson tab.</p>
 </div>
 
 <section id="act">
@@ -407,21 +406,22 @@ The leftover 2020 Funimation run is still live on AMC, Fandango and imax.com wit
 
 <div class="watch">
 <div class="top">
-<h3>Dune: Part Three <span class="chip c-live" style="vertical-align:middle;margin-left:8px">On sale</span></h3>
+<h3>Dune: Part Three <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Dec 17–20, wide Dec 18</span>
 </div>
-<p>It happened, and not the way this page was watching for it. Harkins has live, bookable sessions for the general run — <strong>Dec 17 onward across at least eleven Valley houses</strong>, every one of them CINÉ XL. Tempe Marketplace has five a day on Dec 18, from 9:40 AM to 11:00 PM. The Aug 18 rumor flagged here yesterday is now beside the point: seats exist today, whatever happens Tuesday.</p>
+<p><b>Correction, same day.</b> An earlier version of this page said Dune had gone on sale at Harkins, and led with two IMAX 70mm Insider Screenings at Arizona Mills on Dec 14 and 15. That was wrong, and it was wrong in a way worth explaining because it will come up again.</p>
+<p>The schedule data does contain Dune sessions — Dec 14 and 15 at Arizona Mills flagged IMAX and 70mm, and a general CINÉ XL run from Dec 17 across eleven Valley houses. Each one has a session ID, a ticketing URL, and <code>soldOut: false</code>. None of that means purchasable. <strong>A showing with no inventory loaded looks identical to a showing with every seat free</strong>, because the sold-out flag defaults to false either way.</p>
 <div class="tell">
-<b>The real find is at Arizona Mills</b>
-Harkins is running two <strong>IMAX 70mm Insider Screenings</strong> on <strong>Dec 14 and Dec 15, both at 6:00 PM</strong> — three days before the film opens. Each carries the IMAX and 70mm flags and a live ticketing session, and neither was sold out at the time of this check. These are the only IMAX 70mm Dune showings bookable anywhere in the Harkins system right now.
+<b>The test that actually works</b>
+Open the seat map. A screening that is genuinely on sale renders an auditorium; one that is not returns <em>Unable to load Showtime information</em>. Checked today: Spider-Man tonight loads, The Boy and the Heron on Sep 12 loads, and <strong>Castle in the Sky on Oct 10 — eight weeks out — loads</strong>. Both Dune sessions fail, the Insider IMAX 70mm nights and the general Dec 18 run alike. Distance is not the reason. Dune is simply not on sale.
 </div>
 <div class="tell">
-<b>And the catch</b>
-Arizona Mills has <strong>no</strong> general-run Dune showings loaded at all yet — not Dec 17, not Dec 18. Its 1.43:1 screen currently holds exactly two Dune sessions, both of them these Insider nights. Whether a wider IMAX 70mm run posts later, or whether these two evenings are the whole allocation, is unknown. Treat them as the sure thing and the rest as pending.
+<b>This page has made this mistake before</b>
+On Aug 12 it reported that Dune IMAX 70mm seats had reopened at Arizona Mills, then reverted it the same day once the open seats turned out to be ADA and companion holds. Same film, same screen, same failure to distinguish a record existing from a ticket existing.
 </div>
 <div class="tell">
-<b>Unverified</b>
-Insider Perks is the name of Harkins’ loyalty programme, so these two nights may require an account. The ticketing page will not load a seat map without a session started from the site, so this page cannot confirm eligibility, price, or whether they are open to the general public. Check before you count on one.
+<b>What is still true</b>
+General on-sale has not happened. The Dec 14 and 15 Insider dates are real scheduled bookings and are the first sign of IMAX 70mm intent at Arizona Mills, which is worth watching — but they are not yet buyable. Watch the Harkins email list, then imax.com. The seat map is the confirmation; a session ID alone is not.
 </div>
 </div>
 
@@ -738,7 +738,7 @@ All three extended cuts went on sale in Tucson, at Galaxy Theatres under Flashba
 <span class="chip c-live">On sale</span>
 <h3>Castle in the Sky <span>— 40th anniversary, Oct 10, 11 and 14</span></h3>
 <p class="where">Harkins, 17 locations including Tempe Marketplace 16</p>
-<p class="body">English dub Oct 10 at 3:00 and 7:00 PM across seventeen Harkins houses, with further dates Oct 11 and 14 and a Japanese-subtitled version filed separately. Already selling. Beyond this section’s usual six-week horizon, but it is the only anime booking on the Valley calendar and it lands seven weeks after Tucson gets the same film — Galaxy Theatres Tucson has it Aug 22–24. See the Tucson tab; the presentations are the same DCP, only the dates differ.</p>
+<p class="body">English dub Oct 10 at 3:00 and 7:00 PM across seventeen Harkins houses, with further dates Oct 11 and 14 and a Japanese-subtitled version filed separately. Verified on sale — the Oct 10 seat map renders a full auditorium at Tempe Marketplace. Beyond this section’s usual six-week horizon, but it is the only anime booking on the Valley calendar and it lands seven weeks after Tucson gets the same film — Galaxy Theatres Tucson has it Aug 22–24. See the Tucson tab; the presentations are the same DCP, only the dates differ.</p>
 </div>
 </div>
 
@@ -750,6 +750,10 @@ All three extended cuts went on sale in Tucson, at Galaxy Theatres under Flashba
 <span class="note">Newest first</span>
 </div>
 <ul class="log">
+<li><span class="dt">Aug 15</span><span><b>Correction to the four Dune entries below.</b> Dune: Part Three is <em>not</em> on sale. Earlier today this page reported two bookable IMAX 70mm Insider Screenings at Arizona Mills and a general CINÉ XL run from Dec 17, and led the tab with it. The schedule records are real, but none of them can be bought.</span></li>
+<li><span class="dt">Aug 15</span><span>How the error happened: a session ID, a ticketing URL and <code>soldOut: false</code> were treated as proof of purchasability. They are not. A showing with no inventory loaded is indistinguishable from a wide-open one, because the sold-out flag reads false in both cases.</span></li>
+<li><span class="dt">Aug 15</span><span>The reliable test is the seat map. Genuinely on-sale screenings render an auditorium months ahead — Castle in the Sky on Oct 10, eight weeks out, loads a full map at Tempe Marketplace. Every Dune session tested returns “Unable to load Showtime information.” Distance is not the reason; Dune is not on sale.</span></li>
+<li><span class="dt">Aug 15</span><span>Castle in the Sky is confirmed by the same test: Oct 10 at Tempe Marketplace renders a seat map, so its on-sale status on this page is now verified rather than inferred.</span></li>
 <li><span class="dt">Aug 15</span><span>Dune: Part Three is on sale at Harkins. Two IMAX 70mm Insider Screenings are bookable at Arizona Mills for Dec 14 and Dec 15, both 6:00 PM, each carrying the IMAX and 70mm flags with a live ticketing session and neither sold out at the time of checking. Found from a direct movie URL, not from any announcement.</span></li>
 <li><span class="dt">Aug 15</span><span>Caveat on the above: Arizona Mills has no general-run Dune showings loaded for Dec 17 or Dec 18. Its 1.43:1 screen currently holds only those two Insider nights. A wider IMAX 70mm run may or may not post later.</span></li>
 <li><span class="dt">Aug 15</span><span>The general Dune run is also live — at least eleven Valley Harkins houses from Dec 17, every showing CINÉ XL. Tempe Marketplace has five a day on Dec 18, 9:40 AM to 11:00 PM. The general on-sale this page has been waiting months for has happened, quietly and with no announcement.</span></li>
@@ -761,10 +765,6 @@ All three extended cuts went on sale in Tucson, at Galaxy Theatres under Flashba
 <li><span class="dt">Aug 15</span><span>The Faculty on Sep 13 at Regal Gilbert has moved from announced to on sale. Cinemark’s three-night Batman Day, Sep 18–20, is also selling.</span></li>
 <li><span class="dt">Aug 15</span><span>Regal will show the first three Halloween films Sep 4–6 to promote a video game launch; not on sale. Taliesin West opened its 2026–27 season — eight films from Oct 23 to May 28 — with tickets going live Monday Aug 17. Warner will re-release The Devils for one week from Oct 16, not on sale.</span></li>
 <li><span class="dt">Aug 15</span><span>The Odyssey in 70mm still ends at Tempe Marketplace on Aug 20; Aug 21 onward returns no 70mm showing. Arizona Mills IMAX 70mm has extended and now sells past Sep 15, up from Sep 4 yesterday. Austin has been running the same film in IMAX all summer at the Bullock and it is sold out — see the Austin tab.</span></li>
-<li><span class="dt">Aug 15</span><span>No new advance-screening passes anywhere in the metro. Phoenix, Scottsdale and Tempe all return the same Mutiny screening on Aug 18 at Harkins Camelview, which has picked up a fourth outlet in The Entertainer Magazine. Akira is unchanged — both Harkins listings still carry no showtimes and no format.</span></li>
-<li><span class="dt">Aug 14</span><span>Nothing new opened in the Valley today. cmiphx.com has posted no news since Aug 12, and the Phoenix, Tempe, Scottsdale and Peoria pass pages all return the same single Mutiny screening on Aug 18 — no new giveaways anywhere in the metro.</span></li>
-<li><span class="dt">Aug 14</span><span>The Odyssey 70mm at Harkins Tempe Marketplace has six days left. Today’s four showings are 10:45 AM, 2:40, 6:35 and 10:20 PM; the run still ends Aug 20, with Aug 21 and Aug 22 both returning no 70mm. Arizona Mills IMAX 70mm is now bookable out to Sep 4.</span></li>
-<li><span class="dt">Aug 14</span><span>Akira has not moved. Both Harkins listings — subtitled and English dub — still read presale unavailable with no showtimes and no format attached, unchanged from yesterday.</span></li>
 </ul>
 </section>
 
@@ -963,17 +963,17 @@ Third day, same answer. Galaxy's Tucson Experiences page lists IMAX, but that pa
 
 <div class="watch">
 <div class="top">
-<h3>Dune: Part Three <span class="chip c-live" style="vertical-align:middle;margin-left:8px">On sale</span></h3>
+<h3>Dune: Part Three <span class="chip c-wait" style="vertical-align:middle;margin-left:8px">Not on sale</span></h3>
 <span class="rel">Dec 17–20, wide Dec 18</span>
 </div>
-<p>Harkins Tucson Spectrum has Dune bookable for the general run. Dec 18 currently shows <strong>two showings, 3:50 PM and 10:45 PM, both CINÉ XL</strong> — thin next to the Valley houses, several of which carry five a day. Expect it to fill in closer to the date; two showings four months out is a placeholder, not a final allocation.</p>
+<p><b>Correction, same day.</b> An earlier version of this page said Dune was on sale at Harkins Tucson Spectrum with two CINÉ XL showings on Dec 18. It is not. The schedule records exist and carry session IDs and a sold-out flag reading false, but the seat map will not load for them, which is the difference between a booking existing in the system and a ticket you can buy.</p>
 <div class="tell">
-<b>The IMAX 70mm question is now settled, in the negative</b>
-Harkins has posted two IMAX 70mm Insider Screenings for Dec 14 and 15, and both are at Arizona Mills in the Valley. Tucson Spectrum has no IMAX screen, so the nearest 1.43:1 film presentation of this film is in Phoenix. Times are on the Valley tab.
+<b>How this was checked</b>
+Seat maps load fine for genuinely on-sale screenings months ahead — Castle in the Sky on Oct 10 renders a full auditorium. Every Dune session tested, in both cities, returns an error instead. See the Valley tab for the full test.
 </div>
 <div class="tell">
-<b>Watch instead</b>
-<strong>galaxytheatres.com/movie-theater/tucson</strong> daily grid, not the Experiences page, for a DFX booking — the best large-format option in the city. The Loft does not book wide-release tentpoles.
+<b>Unchanged, and still the point for Tucson</b>
+When it does go on sale, Tucson Spectrum has no IMAX screen. Harkins has pencilled its IMAX 70mm dates at Arizona Mills in the Valley, so the nearest 1.43:1 film presentation will be a drive north. Watch <strong>galaxytheatres.com/movie-theater/tucson</strong> for a DFX booking as the best in-city large format.
 </div>
 </div>
 
@@ -1329,6 +1329,7 @@ The Valley cannot do this yet. On the Valley tab the Harkins Sep 4–6 extended-
 <span class="note">Newest first</span>
 </div>
 <ul class="log">
+<li><span class="dt">Aug 15</span><span><b>Correction.</b> Dune: Part Three is not on sale at Harkins Tucson Spectrum. Earlier today this page reported two CINÉ XL showings bookable for Dec 18 on the strength of schedule records; the seat map will not load for either, which means no ticket exists yet. See the Valley tab for the test.</span></li>
 <li><span class="dt">Aug 15</span><span>Dune: Part Three is on sale at Harkins Tucson Spectrum. Dec 18 currently shows two CINÉ XL showings, 3:50 PM and 10:45 PM — thin against Valley houses carrying five a day, and likely to fill in closer to the date.</span></li>
 <li><span class="dt">Aug 15</span><span>The IMAX 70mm question for Tucson is settled in the negative. Harkins put its two IMAX 70mm Dune screenings at Arizona Mills, Dec 14 and 15. Tucson Spectrum has no IMAX screen, so the nearest 1.43:1 film showing is in the Valley. See the Valley tab.</span></li>
 <li><span class="dt">Aug 15</span><span>The Loft’s CINEMA ’86 series is six films, not one. Down by Law Sep 10, River’s Edge Sep 15, True Stories Sep 17, Something Wild Sep 22 and Sid and Nancy Sep 24 join Blue Velvet on Sep 3. This page had been carrying only Blue Velvet — an omission here, not a new announcement.</span></li>
@@ -1343,7 +1344,6 @@ The Valley cannot do this yet. On the Valley tab the Harkins Sep 4–6 extended-
 <li><span class="dt">Aug 14</span><span>The Harkins side of the LOTR watch is unchanged: Tucson Spectrum’s catalogue entry still shows $8 per film and a $30 series pass at CINÉ XL locations, with no dates, no showtimes and no pass in the store.</span></li>
 <li><span class="dt">Aug 14</span><span>No Tucson advance screening passes. Red Carpet Crash’s Tucson category is still empty and advancescreenings.com still lists no Tucson screenings and no registered Tucson outlets.</span></li>
 <li><span class="dt">Aug 13</span><span>This tab is now a full local page for Tucson. The old "is it worth the hundred-mile drive from Tempe" filter has been dropped — everything that plays here is listed on its own terms, and Austin has been added as a third tab on the same basis.</span></li>
-<li><span class="dt">Aug 13</span><span>Six more Loft dates added, all already on sale and all missing here — La Bamba (Sep 9), The Ghost and Mrs. Muir (Sep 12), The Sting (Sep 19), Out There: A National Parks Story (Sep 20), The Battle of Algiers (Sep 23) and Written on the Wind (Sep 26). The Battle of Algiers is the pick: a 60th-anniversary booking of a film that almost never plays theatrically, and nothing in the Valley has it.</span></li>
 </ul>
 </section>
 
@@ -1632,8 +1632,8 @@ An independent booking by Alamo, AFS or the Paramount organisation. The extended
 Alamo Austin has <em>already</em> opened ticket sales for Dec 17–22 — Avengers: Doomsday is on sale across that exact window. So the schedule reaches into Dune's opening weekend, and Dune is not on it yet. That is not proof of anything, but it means an Austin Dune listing can appear at any time rather than being blocked by how far ahead the schedule runs. Watch <strong>drafthouse.com/austin</strong> and <strong>imax.com/movie/dune-part-three</strong>, where date tabs for Dec 25, 26 and 27 appeared today.
 </div>
 <div class="tell">
-<b>Arizona went on sale today; that says nothing about Austin</b>
-Harkins now has bookable Dune sessions across the Valley and Tucson, plus two IMAX 70mm Insider Screenings at Arizona Mills on Dec 14 and 15. Harkins does not operate in Texas, so this is not a signal about Austin ticketing — it is noted here only so this tab is not read as lagging. Watch <strong>drafthouse.com/austin</strong> and the Bullock. The Bullock is laser rather than film, so even if it takes the booking it will not be the 70mm presentation.
+<b>Correction: Arizona has not gone on sale either</b>
+An earlier version of this page said Harkins had opened Dune sales across Arizona today. It had not — the schedule records exist but the seat maps will not load, so nothing is buyable in any of the three cities yet. Harkins does not operate in Texas in any case. Watch <strong>drafthouse.com/austin</strong> and the Bullock. The Bullock is laser rather than film, so even if it takes the booking it will not be the 70mm presentation.
 </div>
 </div>
 
@@ -1913,6 +1913,7 @@ Austin has none, but it is not the only option within reach. <strong>AMC Riverce
 <span class="note">Newest first</span>
 </div>
 <ul class="log">
+<li><span class="dt">Aug 15</span><span><b>Correction.</b> Earlier today this page said Harkins had opened Dune sales across Arizona. It had not — the records exist but nothing is buyable, in any of the three cities. The Austin position is unchanged and was never affected.</span></li>
 <li><span class="dt">Aug 15</span><span>Harkins opened Dune: Part Three sales across Arizona today, including two IMAX 70mm Insider Screenings at Arizona Mills on Dec 14 and 15. Harkins does not operate in Texas, so this is not a signal about Austin ticketing — noted here only so this tab is not read as lagging.</span></li>
 <li><span class="dt">Aug 15</span><span>Correction, and the largest miss this page has made on Austin: The Odyssey has been playing at the Bullock Museum IMAX since Jul 17 and runs through Sep 3, in 4K dual laser entirely in 1.43:1. This tab had mentioned the film only in passing, and only in relation to AMC Rivercenter in San Antonio. It is here, in the city, in the full frame.</span></li>
 <li><span class="dt">Aug 15</span><span>The Bullock now reports all Odyssey showtimes sold out. Seating is first-come rather than reserved and tickets are date-and-time specific, so released inventory is the only way in before Sep 3.</span></li>
@@ -1927,7 +1928,6 @@ Austin has none, but it is not the only option within reach. <strong>AMC Riverce
 <li><span class="dt">Aug 14</span><span>Added: Father of the Bride, Aug 22 at 3:30 PM at the State Theatre, missing from this page until today. It makes Aug 22 a three-film day there alongside the Hero and Lady Snowblood double bill.</span></li>
 <li><span class="dt">Aug 14</span><span>Alamo’s Austin format list was re-read and still contains only 2D digital, HDR, 35mm and open caption — no 70mm, and the only 35mm prints scheduled remain Super 8 on Aug 18 and Kitten with a Whip on Aug 26, both at South Lamar.</span></li>
 <li><span class="dt">Aug 14</span><span>Cross-reference: The Shining now appears on all three tabs — AFS Cinema Oct 1–10 here, the Loft in Tucson on Sep 30, and the Harkins Kubrick Spotlight in the Valley through Sep 2.</span></li>
-<li><span class="dt">Aug 14</span><span>Dropped as past: The Misfits. The Piano and Ganja and Hess both continue and move to today’s date.</span></li>
 </ul>
 </section>
 
